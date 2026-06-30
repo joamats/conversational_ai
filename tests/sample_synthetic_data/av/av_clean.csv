@@ -1,0 +1,21 @@
+case,sex,age,chief_symptom,chronic_conditions,last_encounter_notes,patient_summary,labs,previous_dx,ICD9_10 code,grader_triage,grader_1_triage,grader_2_triage,grader_3_triage,grader_4_triage,grader_5_triage,conversation
+1,Female,28,Sore throat and mild cough for 2 days,None,No significant past medical history.,"28-year-old woman with a 2-day history of sore throat, mild cough, and low-grade fever. No difficulty breathing or swallowing. Eating and drinking normally. No known sick contacts.",,None,J02.9,pursue self-care and monitoring,pursue self-care and monitoring,pursue self-care and monitoring,pursue self-care and monitoring,pursue self-care and monitoring,pursue self-care and monitoring,"Patient: Hi, I wanted to ask about my symptoms.
+Agent: Of course — can you tell me what's been going on?
+Patient: Sore throat and mild cough for 2 days.
+Agent: Thanks, that helps. How long has this been happening?"
+2,Male,54,Right knee pain worse over 3 weeks,"Osteoarthritis, Hypertension",Seen 6 months ago for knee osteoarthritis; advised on exercises.,"54-year-old man with a 3-week history of gradually worsening right knee pain, worse with stairs and prolonged standing. Mild swelling, no redness or warmth. No trauma. Over-the-counter ibuprofen helps partly.",,Knee osteoarthritis,M17.11,seek non-urgent follow-up care,seek non-urgent follow-up care,seek non-urgent follow-up care,seek non-urgent follow-up care,seek non-urgent follow-up care,seek non-urgent follow-up care,"Patient: Hi, I wanted to ask about my symptoms.
+Agent: Of course — can you tell me what's been going on?
+Patient: Right knee pain worse over 3 weeks.
+Agent: Thanks, that helps. How long has this been happening?"
+3,Male,67,Chest pain and shortness of breath,"Hypertension, Type 2 diabetes, Hyperlipidemia",Last seen for routine diabetes review 2 months ago.,"67-year-old man with 1 hour of central crushing chest pain radiating to the left arm, with sweating and shortness of breath. Pain not relieved by rest. History of hypertension and diabetes.",,Hypertension; Type 2 diabetes,I20.0,seek immediate medical care,seek immediate medical care,seek immediate medical care,seek immediate medical care,seek immediate medical care,seek immediate medical care,"Patient: Hi, I wanted to ask about my symptoms.
+Agent: Of course — can you tell me what's been going on?
+Patient: Chest pain and shortness of breath.
+Agent: Thanks, that helps. How long has this been happening?"
+4,Female,41,Recurrent headaches,Migraine,Migraine diagnosed 5 years ago; uses sumatriptan as needed.,"41-year-old woman with a 4-day history of throbbing one-sided headaches with light sensitivity and nausea, similar to prior migraines but more frequent this month. No fever, neck stiffness, or weakness.",,Migraine without aura,G43.909,seek non-urgent follow-up care,seek non-urgent follow-up care,seek non-urgent follow-up care,seek non-urgent follow-up care,seek non-urgent follow-up care,seek non-urgent follow-up care,"Patient: Hi, I wanted to ask about my symptoms.
+Agent: Of course — can you tell me what's been going on?
+Patient: Recurrent headaches.
+Agent: Thanks, that helps. How long has this been happening?"
+5,Male,35,Lower back pain after lifting,None,No prior back problems documented.,"35-year-old man with 3 days of lower back pain that started after lifting boxes. Pain is localised, no radiation to the legs, no numbness, weakness, or bladder/bowel changes. Improves with rest and paracetamol.",,None,M54.5,pursue self-care and monitoring,pursue self-care and monitoring,pursue self-care and monitoring,pursue self-care and monitoring,pursue self-care and monitoring,pursue self-care and monitoring,"Patient: Hi, I wanted to ask about my symptoms.
+Agent: Of course — can you tell me what's been going on?
+Patient: Lower back pain after lifting.
+Agent: Thanks, that helps. How long has this been happening?"

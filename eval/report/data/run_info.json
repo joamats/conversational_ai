@@ -1,0 +1,57 @@
+{
+  "split": "Test Split",
+  "adherence_run": "20260601_191155_3afb285d",
+  "adherence_run_path": null,
+  "fidelity_run": "20260601_204433_e74b3370",
+  "fidelity_run_path": null,
+  "config": {
+    "split": "test",
+    "n_vignettes": 50,
+    "seed": 42,
+    "comparative_params_to_eval": [
+      "anxiety",
+      "frustration",
+      "patience",
+      "trust",
+      "embarrassment",
+      "recall_level",
+      "oversharing_tendency",
+      "health_literacy",
+      "communication_style",
+      "typo_rate",
+      "abbreviation_tendency",
+      "punctuation_style",
+      "capitalisation",
+      "english_proficiency",
+      "profanity_level"
+    ],
+    "verbosity_params_to_eval": [
+      "verbosity"
+    ],
+    "max_turns_params_to_eval": [
+      "max_turns"
+    ],
+    "probing_params_to_eval": [
+      "stop_gives_up",
+      "stop_goal_met"
+    ],
+    "adversarial_params_to_eval": [],
+    "patient_goal_eval": true,
+    "sensitive_topics_eval": true,
+    "max_workers": 1,
+    "doctor": {
+      "model": "gpt-5.4-mini-2026-03-17",
+      "reasoning_effort": "high",
+      "max_turns": 8,
+      "urgency_levels": {
+        "self-care": "Can be managed at home",
+        "non-urgent": "Follow up with PCP in the coming days/weeks",
+        "urgent": "Needs urgent care or emergency visit now"
+      }
+    },
+    "judge": {
+      "model": "claude-opus-4-6",
+      "client_type": "anthropic_vertex"
+    }
+  }
+}

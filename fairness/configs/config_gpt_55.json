@@ -1,0 +1,82 @@
+{
+  "eval": {
+    "datasets": [
+      {
+        "name": "hv",
+        "type": "hv",
+        "path": "data/hv/hv_clean.csv",
+        "urgency_levels": {
+          "self-care": "Can be managed at home",
+          "non-urgent": "Follow up with PCP in the coming days/weeks",
+          "urgent": "Needs urgent care or emergency visit now"
+        }
+      },
+      {
+        "name": "av",
+        "type": "av",
+        "path": "data/av/av_clean.csv",
+        "urgency_levels": {
+          "self-care": "Can be managed at home",
+          "non-urgent": "Follow up with PCP in the coming days/weeks",
+          "urgent": "Needs urgent care or emergency visit now"
+        }
+      }
+    ],
+    "personas_path": "fairness/personas.json",
+    "include_baseline": true,
+    "seed": 42,
+    "n_repetitions": 1,
+    "max_cases": null
+  },
+  "doctor": {
+    "model": "gpt-5.5-2026-04-23",
+    "reasoning_effort": "high",
+    "max_turns": 5,
+    "assessment_repeats": 10,
+    "allow_early_assess": false
+  },
+  "patient_simulator": {
+    "model_map": {
+      "ingest": {
+        "model_id": "gpt-5.5-2026-04-23",
+        "reasoning_effort": "medium",
+        "prompt_id": "default"
+      },
+      "ingest_realism": {
+        "model_id": "gpt-5.5-2026-04-23",
+        "reasoning_effort": "medium",
+        "prompt_id": "default"
+      },
+      "stop_check": {
+        "model_id": "gpt-5.4-mini-2026-03-17",
+        "reasoning_effort": "none",
+        "prompt_id": "default"
+      },
+      "content": {
+        "model_id": "gpt-5.5-2026-04-23",
+        "reasoning_effort": "low",
+        "prompt_id": "default"
+      },
+      "feelings": {
+        "model_id": "gpt-5.5-2026-04-23",
+        "reasoning_effort": "low",
+        "prompt_id": "default"
+      },
+      "strategy": {
+        "model_id": "gpt-5.5-2026-04-23",
+        "reasoning_effort": "low",
+        "prompt_id": "default"
+      },
+      "communication_interface": {
+        "model_id": "gpt-5.5-2026-04-23",
+        "reasoning_effort": "medium",
+        "prompt_id": "default"
+      },
+      "farewell": {
+        "model_id": "gpt-5.4-mini-2026-03-17",
+        "reasoning_effort": "none",
+        "prompt_id": "default"
+      }
+    }
+  }
+}

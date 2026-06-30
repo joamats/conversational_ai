@@ -1,0 +1,1381 @@
+{
+  "overall": {
+    "total_claims": 680,
+    "n_supported": 442,
+    "n_unsupported": 238,
+    "mean_accuracy": 3.943,
+    "mean_plausibility": 3.79,
+    "supported_distribution": {
+      "1": 0,
+      "2": 0,
+      "3": 25,
+      "4": 417
+    },
+    "unsupported_distribution": {
+      "1": 0,
+      "2": 0,
+      "3": 50,
+      "4": 188
+    },
+    "n_vignette_claims": 1281,
+    "n_vignette_mentioned": 462,
+    "n_vignette_not_mentioned": 819,
+    "coverage_rate": 0.3607,
+    "unsupported_rate": 0.35,
+    "confirmed_rate": 0.9434,
+    "contradiction_rate": 0.0,
+    "total_conversations": 50
+  },
+  "per_vignette": {
+    "21": {
+      "total_claims": 15,
+      "n_supported": 10,
+      "n_unsupported": 5,
+      "mean_accuracy": 4.0,
+      "mean_plausibility": 3.2,
+      "supported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 10
+      },
+      "unsupported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 4,
+        "4": 1
+      },
+      "n_vignette_claims": 24,
+      "n_vignette_mentioned": 10,
+      "n_vignette_not_mentioned": 14,
+      "coverage_rate": 0.4167,
+      "unsupported_rate": 0.3333,
+      "confirmed_rate": 1.0,
+      "contradiction_rate": 0.0,
+      "summary": "The simulated patient accurately conveyed the core presenting complaints (bloating, irritability, breast tenderness for three days before an expected period) and appropriately denied additional symptoms. Fabricated details such as symptom severity ratings and denial of pregnancy were plausible and clinically consistent. However, a significant number of vignette details \u2014 including demographics, medication use, family history, immunization status, and prior management strategies \u2014 were never mentioned in the conversation."
+    },
+    "13": {
+      "total_claims": 17,
+      "n_supported": 16,
+      "n_unsupported": 1,
+      "mean_accuracy": 3.938,
+      "mean_plausibility": 4.0,
+      "supported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 1,
+        "4": 15
+      },
+      "unsupported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 1
+      },
+      "n_vignette_claims": 30,
+      "n_vignette_mentioned": 17,
+      "n_vignette_not_mentioned": 13,
+      "coverage_rate": 0.5667,
+      "unsupported_rate": 0.0588,
+      "confirmed_rate": 0.9375,
+      "contradiction_rate": 0.0,
+      "summary": "The simulated patient demonstrated excellent factual fidelity, with all supported claims accurately reflecting the vignette. The single unsupported claim (denying supplements) was clinically expected and realistic. However, several notable vignette details were never raised, including coffee intake, tension headaches, smoking status, surgical history, and family history, representing significant coverage gaps."
+    },
+    "4": {
+      "total_claims": 9,
+      "n_supported": 7,
+      "n_unsupported": 2,
+      "mean_accuracy": 4.0,
+      "mean_plausibility": 3.5,
+      "supported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 7
+      },
+      "unsupported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 1,
+        "4": 1
+      },
+      "n_vignette_claims": 26,
+      "n_vignette_mentioned": 7,
+      "n_vignette_not_mentioned": 19,
+      "coverage_rate": 0.2692,
+      "unsupported_rate": 0.2222,
+      "confirmed_rate": 1.0,
+      "contradiction_rate": 0.0,
+      "summary": "The simulated patient demonstrated high factual fidelity for the claims it made, with all supported claims accurately reflecting the vignette. The two unsupported claims (pain rating and motivation for visit) were plausible fabrications. However, coverage was limited \u2014 many important vignette details (demographics, occupational context, past medical/family history, aggravating factors, and medication/allergy status) were never mentioned in the conversation."
+    },
+    "19": {
+      "total_claims": 13,
+      "n_supported": 9,
+      "n_unsupported": 4,
+      "mean_accuracy": 4.0,
+      "mean_plausibility": 3.75,
+      "supported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 9
+      },
+      "unsupported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 1,
+        "4": 3
+      },
+      "n_vignette_claims": 21,
+      "n_vignette_mentioned": 9,
+      "n_vignette_not_mentioned": 12,
+      "coverage_rate": 0.4286,
+      "unsupported_rate": 0.3077,
+      "confirmed_rate": 1.0,
+      "contradiction_rate": 0.0,
+      "summary": "The simulated patient demonstrated excellent factual fidelity for the claims it made, with all supported claims rated as accurate (score 4) and all unsupported claims rated as expected or plausible. However, there are significant coverage gaps: key history elements such as the prior hysterectomy, recurrent UTIs, medication/allergy status, family history, and the known cystocele were never mentioned, which would be critical for clinical reasoning."
+    },
+    "1": {
+      "total_claims": 15,
+      "n_supported": 10,
+      "n_unsupported": 5,
+      "mean_accuracy": 3.9,
+      "mean_plausibility": 3.8,
+      "supported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 1,
+        "4": 9
+      },
+      "unsupported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 1,
+        "4": 4
+      },
+      "n_vignette_claims": 28,
+      "n_vignette_mentioned": 11,
+      "n_vignette_not_mentioned": 17,
+      "coverage_rate": 0.3929,
+      "unsupported_rate": 0.3333,
+      "confirmed_rate": 0.9,
+      "contradiction_rate": 0.0,
+      "summary": "The simulated patient demonstrated excellent factual fidelity, with all supported claims accurately reflecting the vignette and no contradictions or distortions. Unsupported fabricated claims were clinically appropriate and expected for a patient with this osteoarthritis profile. However, a significant number of vignette details \u2014 including past medical/surgical history, medications, family history, and demographic information \u2014 were not raised in the conversation, representing notable coverage gaps."
+    },
+    "0": {
+      "total_claims": 15,
+      "n_supported": 9,
+      "n_unsupported": 6,
+      "mean_accuracy": 3.667,
+      "mean_plausibility": 3.5,
+      "supported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 3,
+        "4": 6
+      },
+      "unsupported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 3,
+        "4": 3
+      },
+      "n_vignette_claims": 21,
+      "n_vignette_mentioned": 9,
+      "n_vignette_not_mentioned": 12,
+      "coverage_rate": 0.4286,
+      "unsupported_rate": 0.4,
+      "confirmed_rate": 0.6667,
+      "contradiction_rate": 0.0,
+      "summary": "The simulated patient accurately conveyed the core presenting complaint, medications, allergy, and key negative findings from the vignette, though medication doses were consistently omitted (rated as imprecise). Several important vignette details\u2014including age, occupation, surgical history, disease duration, morning stiffness, chronic fatigue, family history, and active disease in hands and feet\u2014were never raised in the conversation. Fabricated details (onset timing, pain severity, functional impact) were all clinically plausible and consistent with the patient's profile."
+    },
+    "42": {
+      "total_claims": 13,
+      "n_supported": 6,
+      "n_unsupported": 7,
+      "mean_accuracy": 4.0,
+      "mean_plausibility": 3.857,
+      "supported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 6
+      },
+      "unsupported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 1,
+        "4": 6
+      },
+      "n_vignette_claims": 23,
+      "n_vignette_mentioned": 8,
+      "n_vignette_not_mentioned": 15,
+      "coverage_rate": 0.3478,
+      "unsupported_rate": 0.5385,
+      "confirmed_rate": 1.0,
+      "contradiction_rate": 0.0,
+      "summary": "The simulated patient demonstrated excellent factual fidelity, with all supported claims accurately reflecting the vignette (all scored 4/4). Unsupported claims were uniformly plausible or expected for a 19-year-old athlete with hypothalamic amenorrhea. However, several important vignette details were not raised during the conversation, including the prior stress fracture, family history of irregular periods, low BMI, age, and allergy/immunization status, which represent significant coverage gaps."
+    },
+    "48": {
+      "total_claims": 11,
+      "n_supported": 6,
+      "n_unsupported": 5,
+      "mean_accuracy": 4.0,
+      "mean_plausibility": 3.6,
+      "supported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 6
+      },
+      "unsupported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 2,
+        "4": 3
+      },
+      "n_vignette_claims": 24,
+      "n_vignette_mentioned": 10,
+      "n_vignette_not_mentioned": 14,
+      "coverage_rate": 0.4167,
+      "unsupported_rate": 0.4545,
+      "confirmed_rate": 1.0,
+      "contradiction_rate": 0.0,
+      "summary": "The simulated patient demonstrated high factual fidelity, with all supported claims accurately reflecting the vignette and all unsupported (fabricated) claims being plausible or expected for this clinical profile. However, there were notable coverage gaps: key history elements such as the recent cold, vaccination history, age, and denial of new foods/exposures were never mentioned during the conversation."
+    },
+    "23": {
+      "total_claims": 10,
+      "n_supported": 7,
+      "n_unsupported": 3,
+      "mean_accuracy": 3.857,
+      "mean_plausibility": 4.0,
+      "supported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 1,
+        "4": 6
+      },
+      "unsupported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 3
+      },
+      "n_vignette_claims": 32,
+      "n_vignette_mentioned": 10,
+      "n_vignette_not_mentioned": 22,
+      "coverage_rate": 0.3125,
+      "unsupported_rate": 0.3,
+      "confirmed_rate": 0.8571,
+      "contradiction_rate": 0.0,
+      "summary": "The simulated patient demonstrated excellent factual fidelity for the claims it did make, with all supported claims being accurate or nearly so. Unsupported claims (about pregnancy likelihood, pregnancy testing, and pelvic pain) were all clinically expected fabrications for this patient profile. However, the conversation covered only a small fraction of the vignette, with many important details about medical history, social history, family history, medications, and associated symptoms (hot flashes, fatigue) remaining unmentioned."
+    },
+    "45": {
+      "total_claims": 12,
+      "n_supported": 9,
+      "n_unsupported": 3,
+      "mean_accuracy": 3.889,
+      "mean_plausibility": 3.667,
+      "supported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 1,
+        "4": 8
+      },
+      "unsupported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 1,
+        "4": 2
+      },
+      "n_vignette_claims": 23,
+      "n_vignette_mentioned": 10,
+      "n_vignette_not_mentioned": 13,
+      "coverage_rate": 0.4348,
+      "unsupported_rate": 0.25,
+      "confirmed_rate": 0.8889,
+      "contradiction_rate": 0.0,
+      "summary": "The simulated patient demonstrated high factual fidelity, with all supported claims rated as accurate or imprecise, and no contradictions or distortions. Unsupported claims (elaboration on initial symptom progression, denial of orthopnea, and denial of known heart/lung disease) were all clinically plausible or expected. However, several important vignette details \u2014 including demographics, BMI, smoking status, family history, allergies, and additional review of systems items \u2014 were never mentioned, representing significant coverage gaps."
+    },
+    "44": {
+      "total_claims": 9,
+      "n_supported": 6,
+      "n_unsupported": 3,
+      "mean_accuracy": 4.0,
+      "mean_plausibility": 4.0,
+      "supported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 6
+      },
+      "unsupported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 3
+      },
+      "n_vignette_claims": 22,
+      "n_vignette_mentioned": 6,
+      "n_vignette_not_mentioned": 16,
+      "coverage_rate": 0.2727,
+      "unsupported_rate": 0.3333,
+      "confirmed_rate": 1.0,
+      "contradiction_rate": 0.0,
+      "summary": "The simulated patient demonstrated excellent factual fidelity, with all supported claims accurately reflecting the vignette and all unsupported claims (denying fever, back pain, and hematuria) being clinically expected given the patient's profile. However, many vignette details were never mentioned in the conversation, including demographics, occupation, prior UTI history, hydration habits, and vaccination status, resulting in significant coverage gaps."
+    },
+    "41": {
+      "total_claims": 13,
+      "n_supported": 6,
+      "n_unsupported": 7,
+      "mean_accuracy": 4.0,
+      "mean_plausibility": 4.0,
+      "supported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 6
+      },
+      "unsupported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 7
+      },
+      "n_vignette_claims": 17,
+      "n_vignette_mentioned": 6,
+      "n_vignette_not_mentioned": 11,
+      "coverage_rate": 0.3529,
+      "unsupported_rate": 0.5385,
+      "confirmed_rate": 1.0,
+      "contradiction_rate": 0.0,
+      "summary": "The simulated patient demonstrated excellent factual fidelity, with all supported claims accurately reflecting the vignette and all unsupported claims being clinically expected for this patient profile. However, several important vignette details\u2014including the patient's age, occupation, family history, surgical history, recent gardening activity, and inadequate hydration\u2014were never mentioned during the conversation, representing significant coverage gaps that could affect clinical reasoning."
+    },
+    "18": {
+      "total_claims": 14,
+      "n_supported": 9,
+      "n_unsupported": 5,
+      "mean_accuracy": 4.0,
+      "mean_plausibility": 4.0,
+      "supported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 9
+      },
+      "unsupported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 5
+      },
+      "n_vignette_claims": 22,
+      "n_vignette_mentioned": 8,
+      "n_vignette_not_mentioned": 14,
+      "coverage_rate": 0.3636,
+      "unsupported_rate": 0.3571,
+      "confirmed_rate": 1.0,
+      "contradiction_rate": 0.0,
+      "summary": "The simulated patient demonstrated excellent factual fidelity, with all supported claims accurately reflecting the vignette and all fabricated responses being clinically expected for this patient profile. No contradictions or distortions were identified. However, several important vignette details\u2014including demographics, social history, family history of prostate cancer, allergies, and denial of urgency\u2014were not raised during the conversation."
+    },
+    "29": {
+      "total_claims": 12,
+      "n_supported": 5,
+      "n_unsupported": 7,
+      "mean_accuracy": 4.0,
+      "mean_plausibility": 3.714,
+      "supported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 5
+      },
+      "unsupported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 2,
+        "4": 5
+      },
+      "n_vignette_claims": 35,
+      "n_vignette_mentioned": 6,
+      "n_vignette_not_mentioned": 29,
+      "coverage_rate": 0.1714,
+      "unsupported_rate": 0.5833,
+      "confirmed_rate": 1.0,
+      "contradiction_rate": 0.0,
+      "summary": "The simulated patient demonstrated high factual fidelity for the claims it did make, with all supported claims accurately reflecting the vignette and all fabricated claims being clinically plausible or expected for a GERD-like presentation. However, the conversation covered only a small fraction of the vignette's content, with numerous demographic, historical, and review-of-systems details never mentioned. The fabricated details (severity rating, postprandial/supine worsening, coffee aggravation) were all well-aligned with the clinical profile."
+    },
+    "49": {
+      "total_claims": 17,
+      "n_supported": 14,
+      "n_unsupported": 3,
+      "mean_accuracy": 4.0,
+      "mean_plausibility": 4.0,
+      "supported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 14
+      },
+      "unsupported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 3
+      },
+      "n_vignette_claims": 28,
+      "n_vignette_mentioned": 16,
+      "n_vignette_not_mentioned": 12,
+      "coverage_rate": 0.5714,
+      "unsupported_rate": 0.1765,
+      "confirmed_rate": 1.0,
+      "contradiction_rate": 0.0,
+      "summary": "The simulated patient demonstrated excellent factual fidelity, with all supported claims accurately reflecting the vignette and all unsupported fabrications being clinically expected. However, several vignette details\u2014including age, marital status, occupation, mood symptoms (anxiety and irritability), social history (smoking and alcohol), family history, and denial of chills\u2014were never raised in the conversation, representing notable coverage gaps."
+    },
+    "15": {
+      "total_claims": 17,
+      "n_supported": 13,
+      "n_unsupported": 4,
+      "mean_accuracy": 4.0,
+      "mean_plausibility": 4.0,
+      "supported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 13
+      },
+      "unsupported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 4
+      },
+      "n_vignette_claims": 26,
+      "n_vignette_mentioned": 15,
+      "n_vignette_not_mentioned": 11,
+      "coverage_rate": 0.5769,
+      "unsupported_rate": 0.2353,
+      "confirmed_rate": 1.0,
+      "contradiction_rate": 0.0,
+      "summary": "The simulated patient demonstrated excellent factual fidelity, with all supported claims accurately matching the vignette and all unsupported (fabricated) claims being clinically expected for this patient's profile. No claims were contradicted or distorted. However, several important vignette details\u2014including age, smoking status, family history, contraceptive use, and surgical history\u2014were not mentioned during the conversation, representing notable coverage gaps."
+    },
+    "33": {
+      "total_claims": 18,
+      "n_supported": 14,
+      "n_unsupported": 4,
+      "mean_accuracy": 3.857,
+      "mean_plausibility": 3.75,
+      "supported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 2,
+        "4": 12
+      },
+      "unsupported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 1,
+        "4": 3
+      },
+      "n_vignette_claims": 30,
+      "n_vignette_mentioned": 13,
+      "n_vignette_not_mentioned": 17,
+      "coverage_rate": 0.4333,
+      "unsupported_rate": 0.2222,
+      "confirmed_rate": 0.8571,
+      "contradiction_rate": 0.0,
+      "summary": "The simulated patient demonstrated high factual fidelity, accurately conveying all key presenting symptoms, their characteristics, and relevant negatives. Medication names and usage patterns were correct though doses were omitted, resulting in minor imprecision. Fabricated responses (denying hemorrhoids, fissures, IBD, and pelvic surgery) were all clinically plausible and consistent with the patient's profile. However, a notable number of vignette details \u2014 including demographics, surgical history, psychiatric history, family history, and several review-of-systems items \u2014 were never discussed in the conversation."
+    },
+    "35": {
+      "total_claims": 13,
+      "n_supported": 9,
+      "n_unsupported": 4,
+      "mean_accuracy": 4.0,
+      "mean_plausibility": 3.75,
+      "supported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 9
+      },
+      "unsupported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 1,
+        "4": 3
+      },
+      "n_vignette_claims": 23,
+      "n_vignette_mentioned": 10,
+      "n_vignette_not_mentioned": 13,
+      "coverage_rate": 0.4348,
+      "unsupported_rate": 0.3077,
+      "confirmed_rate": 1.0,
+      "contradiction_rate": 0.0,
+      "summary": "The simulated patient demonstrated excellent factual fidelity, with all supported claims accurately reflecting the vignette and no contradictions or distortions. Unsupported claims were clinically appropriate and consistent with the patient's profile. However, several vignette details\u2014including demographics, immunization history, allergies, and family history\u2014were never raised in the conversation."
+    },
+    "2": {
+      "total_claims": 20,
+      "n_supported": 13,
+      "n_unsupported": 7,
+      "mean_accuracy": 4.0,
+      "mean_plausibility": 3.857,
+      "supported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 13
+      },
+      "unsupported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 1,
+        "4": 6
+      },
+      "n_vignette_claims": 26,
+      "n_vignette_mentioned": 13,
+      "n_vignette_not_mentioned": 13,
+      "coverage_rate": 0.5,
+      "unsupported_rate": 0.35,
+      "confirmed_rate": 1.0,
+      "contradiction_rate": 0.0,
+      "summary": "The simulated patient demonstrated excellent factual fidelity, with all supported claims accurately reflecting the vignette and no contradictions or distortions. Unsupported claims (fabricated responses to questions not covered by the vignette) were uniformly expected or plausible given the clinical profile. However, several vignette details\u2014including demographics, smoking history, family history, nocturia frequency, and living situation\u2014were never raised in the conversation, representing notable coverage gaps."
+    },
+    "31": {
+      "total_claims": 12,
+      "n_supported": 8,
+      "n_unsupported": 4,
+      "mean_accuracy": 4.0,
+      "mean_plausibility": 4.0,
+      "supported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 8
+      },
+      "unsupported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 4
+      },
+      "n_vignette_claims": 17,
+      "n_vignette_mentioned": 8,
+      "n_vignette_not_mentioned": 9,
+      "coverage_rate": 0.4706,
+      "unsupported_rate": 0.3333,
+      "confirmed_rate": 1.0,
+      "contradiction_rate": 0.0,
+      "summary": "The simulated patient demonstrated excellent factual fidelity, with all supported claims accurately reflecting the vignette and all unsupported claims being clinically expected for the patient's profile. No contradictions or distortions were identified. Several vignette details (demographics, denial of nausea, family history, dehydration status) were not explicitly raised in the conversation but represent coverage gaps rather than errors."
+    },
+    "10": {
+      "total_claims": 11,
+      "n_supported": 5,
+      "n_unsupported": 6,
+      "mean_accuracy": 4.0,
+      "mean_plausibility": 3.5,
+      "supported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 5
+      },
+      "unsupported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 3,
+        "4": 3
+      },
+      "n_vignette_claims": 20,
+      "n_vignette_mentioned": 4,
+      "n_vignette_not_mentioned": 16,
+      "coverage_rate": 0.2,
+      "unsupported_rate": 0.5455,
+      "confirmed_rate": 1.0,
+      "contradiction_rate": 0.0,
+      "summary": "The patient simulator was accurate on all claims directly supported by the vignette and provided plausible or expected fabrications for questions beyond the vignette's scope. However, the conversation covered only a narrow portion of the vignette \u2014 major elements including the patient's thyroid history, medication use, fatigue, weight gain, family history, surgical history, and recent lab results were never mentioned. This suggests the conversation was incomplete or very early in the encounter."
+    },
+    "47": {
+      "total_claims": 11,
+      "n_supported": 11,
+      "n_unsupported": 0,
+      "mean_accuracy": 3.909,
+      "mean_plausibility": 0.0,
+      "supported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 1,
+        "4": 10
+      },
+      "unsupported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0
+      },
+      "n_vignette_claims": 28,
+      "n_vignette_mentioned": 11,
+      "n_vignette_not_mentioned": 17,
+      "coverage_rate": 0.3929,
+      "unsupported_rate": 0.0,
+      "confirmed_rate": 0.9091,
+      "contradiction_rate": 0.0,
+      "summary": "The simulated patient demonstrated excellent factual fidelity, with all 11 claims being supported by the vignette and nearly all rated as fully accurate. One minor imprecision was noted (omitting 'high school' from the job description). However, a significant number of vignette details were never raised in the conversation, including demographics, medical history, medications, allergies, vaccination status, fatigue, and palpitations."
+    },
+    "12": {
+      "total_claims": 18,
+      "n_supported": 12,
+      "n_unsupported": 6,
+      "mean_accuracy": 3.917,
+      "mean_plausibility": 4.0,
+      "supported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 1,
+        "4": 11
+      },
+      "unsupported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 6
+      },
+      "n_vignette_claims": 32,
+      "n_vignette_mentioned": 12,
+      "n_vignette_not_mentioned": 20,
+      "coverage_rate": 0.375,
+      "unsupported_rate": 0.3333,
+      "confirmed_rate": 0.9167,
+      "contradiction_rate": 0.0,
+      "summary": "The simulated patient accurately conveyed the core presentation of a severe panic attack with ineffective inhaler use, asthma and anxiety history, and erythromycin allergy. Unsupported claims (denials of chest pain, wheezing, syncope, etc.) were all clinically expected given the vignette's profile. However, a significant number of vignette details were not mentioned\u2014including palpitations, trembling, dizziness, derealization, the job-stress trigger, and key demographic/social history\u2014indicating substantial coverage gaps despite high accuracy on what was discussed."
+    },
+    "32": {
+      "total_claims": 18,
+      "n_supported": 9,
+      "n_unsupported": 9,
+      "mean_accuracy": 4.0,
+      "mean_plausibility": 4.0,
+      "supported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 9
+      },
+      "unsupported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 9
+      },
+      "n_vignette_claims": 22,
+      "n_vignette_mentioned": 7,
+      "n_vignette_not_mentioned": 15,
+      "coverage_rate": 0.3182,
+      "unsupported_rate": 0.5,
+      "confirmed_rate": 1.0,
+      "contradiction_rate": 0.0,
+      "summary": "The simulated patient demonstrated excellent factual fidelity, with all supported claims accurately reflecting the vignette and all unsupported fabrications being clinically expected for this patient profile. No contradictions or distortions were identified. However, several vignette details\u2014including demographics, immunization history, allergies, and specific dental counseling\u2014were not raised in the conversation, representing notable coverage gaps."
+    },
+    "38": {
+      "total_claims": 12,
+      "n_supported": 9,
+      "n_unsupported": 3,
+      "mean_accuracy": 4.0,
+      "mean_plausibility": 4.0,
+      "supported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 9
+      },
+      "unsupported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 3
+      },
+      "n_vignette_claims": 18,
+      "n_vignette_mentioned": 8,
+      "n_vignette_not_mentioned": 10,
+      "coverage_rate": 0.4444,
+      "unsupported_rate": 0.25,
+      "confirmed_rate": 1.0,
+      "contradiction_rate": 0.0,
+      "summary": "The simulated patient demonstrated excellent factual fidelity, with all supported claims accurately reflecting the vignette and no contradictions. Unsupported claims (no medications, no allergies) were entirely expected given the patient's clean medical history. However, several vignette details were never raised, notably the patient's occupation, environmental risk factors, cracking skin, and demographics."
+    },
+    "39": {
+      "total_claims": 17,
+      "n_supported": 12,
+      "n_unsupported": 5,
+      "mean_accuracy": 3.833,
+      "mean_plausibility": 3.6,
+      "supported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 2,
+        "4": 10
+      },
+      "unsupported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 2,
+        "4": 3
+      },
+      "n_vignette_claims": 40,
+      "n_vignette_mentioned": 13,
+      "n_vignette_not_mentioned": 27,
+      "coverage_rate": 0.325,
+      "unsupported_rate": 0.2941,
+      "confirmed_rate": 0.8333,
+      "contradiction_rate": 0.0,
+      "summary": "The simulated patient demonstrated high factual fidelity, with all supported claims rated as accurate or only slightly imprecise. Unsupported claims were all plausible or expected given the clinical profile. However, many vignette details\u2014including the patient's age, veteran status, heavy drinking, family history, and numerous review-of-systems denials\u2014were never raised in the conversation, representing significant coverage gaps."
+    },
+    "25": {
+      "total_claims": 28,
+      "n_supported": 19,
+      "n_unsupported": 9,
+      "mean_accuracy": 3.947,
+      "mean_plausibility": 3.778,
+      "supported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 1,
+        "4": 18
+      },
+      "unsupported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 2,
+        "4": 7
+      },
+      "n_vignette_claims": 35,
+      "n_vignette_mentioned": 13,
+      "n_vignette_not_mentioned": 22,
+      "coverage_rate": 0.3714,
+      "unsupported_rate": 0.3214,
+      "confirmed_rate": 0.9474,
+      "contradiction_rate": 0.0,
+      "summary": "The simulated patient demonstrated excellent factual fidelity, with all supported claims rated as accurate (score 4) and no contradictions or distortions. Unsupported fabrications were uniformly plausible or expected given the clinical profile. However, there were significant coverage gaps \u2014 many vignette details including demographics, social history (alcohol use, diet), family history (hypothyroidism, hypertension, hyperlipidemia), surgical history, and several review-of-systems items were never raised in the conversation."
+    },
+    "22": {
+      "total_claims": 17,
+      "n_supported": 6,
+      "n_unsupported": 11,
+      "mean_accuracy": 3.833,
+      "mean_plausibility": 3.727,
+      "supported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 1,
+        "4": 5
+      },
+      "unsupported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 3,
+        "4": 8
+      },
+      "n_vignette_claims": 35,
+      "n_vignette_mentioned": 6,
+      "n_vignette_not_mentioned": 29,
+      "coverage_rate": 0.1714,
+      "unsupported_rate": 0.6471,
+      "confirmed_rate": 0.8333,
+      "contradiction_rate": 0.0,
+      "summary": "The simulated patient demonstrated good factual fidelity for the claims covered in conversation, accurately reflecting the chief complaint, symptom description, medication status, and relevant denials. However, a significant portion of the vignette\u2014including demographics, social history, family history, allergies, and most of the review of systems\u2014was never raised. The one minor concern is that the patient said she was 'unsure' of the cause rather than attributing symptoms to stress as the vignette indicates, but fabricated responses (e.g., worsening after eating and lying down) were clinically appropriate and expected."
+    },
+    "36": {
+      "total_claims": 7,
+      "n_supported": 4,
+      "n_unsupported": 3,
+      "mean_accuracy": 4.0,
+      "mean_plausibility": 4.0,
+      "supported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 4
+      },
+      "unsupported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 3
+      },
+      "n_vignette_claims": 23,
+      "n_vignette_mentioned": 6,
+      "n_vignette_not_mentioned": 17,
+      "coverage_rate": 0.2609,
+      "unsupported_rate": 0.4286,
+      "confirmed_rate": 1.0,
+      "contradiction_rate": 0.0,
+      "summary": "The simulated patient accurately conveyed the key presenting symptoms mentioned in the conversation, with no contradictions or distortions. However, the conversation was very brief, leaving many important vignette details unmentioned, including demographics, allergy history, medication use, family history, and examination findings. All unsupported claims (denying breathing difficulty, wheezing, and lip/tongue swelling) were clinically expected given the patient's profile."
+    },
+    "8": {
+      "total_claims": 18,
+      "n_supported": 14,
+      "n_unsupported": 4,
+      "mean_accuracy": 3.786,
+      "mean_plausibility": 3.5,
+      "supported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 3,
+        "4": 11
+      },
+      "unsupported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 2,
+        "4": 2
+      },
+      "n_vignette_claims": 33,
+      "n_vignette_mentioned": 18,
+      "n_vignette_not_mentioned": 15,
+      "coverage_rate": 0.5455,
+      "unsupported_rate": 0.2222,
+      "confirmed_rate": 0.7857,
+      "contradiction_rate": 0.0,
+      "summary": "The simulated patient demonstrated high factual fidelity for the claims it made, with all supported claims rated as accurate or only slightly imprecise (missing medication doses). Unsupported claims were plausible and clinically appropriate. However, there are significant coverage gaps \u2014 many important vignette details including age, alcohol use, surgical history, allergies, family history, smoking status, anhedonia, and suicidal ideation were never mentioned in the conversation."
+    },
+    "37": {
+      "total_claims": 14,
+      "n_supported": 10,
+      "n_unsupported": 4,
+      "mean_accuracy": 3.9,
+      "mean_plausibility": 4.0,
+      "supported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 1,
+        "4": 9
+      },
+      "unsupported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 4
+      },
+      "n_vignette_claims": 19,
+      "n_vignette_mentioned": 8,
+      "n_vignette_not_mentioned": 11,
+      "coverage_rate": 0.4211,
+      "unsupported_rate": 0.2857,
+      "confirmed_rate": 0.9,
+      "contradiction_rate": 0.0,
+      "summary": "The simulated patient demonstrated high factual fidelity, with all supported claims accurately reflecting the vignette and all unsupported claims being clinically expected responses. However, significant coverage gaps exist \u2014 key details such as the patient's age, stressful divorce, A1c level, decreased morning erections, intact libido, and mild fatigue were never mentioned, which could affect clinical reasoning if the doctor did not ask about them."
+    },
+    "43": {
+      "total_claims": 14,
+      "n_supported": 7,
+      "n_unsupported": 7,
+      "mean_accuracy": 4.0,
+      "mean_plausibility": 4.0,
+      "supported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 7
+      },
+      "unsupported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 7
+      },
+      "n_vignette_claims": 23,
+      "n_vignette_mentioned": 7,
+      "n_vignette_not_mentioned": 16,
+      "coverage_rate": 0.3043,
+      "unsupported_rate": 0.5,
+      "confirmed_rate": 1.0,
+      "contradiction_rate": 0.0,
+      "summary": "The simulated patient demonstrated excellent factual fidelity across all claims made in the conversation. All supported claims were fully accurate with no distortions or contradictions, and all unsupported (fabricated) claims were clinically expected for a 62-year-old perimenopausal woman with light intermenstrual spotting. However, significant coverage gaps remain, as many vignette details\u2014including menopausal symptoms (hot flashes, night sweats), social history, family history, and lifestyle\u2014were never discussed."
+    },
+    "20": {
+      "total_claims": 7,
+      "n_supported": 4,
+      "n_unsupported": 3,
+      "mean_accuracy": 4.0,
+      "mean_plausibility": 4.0,
+      "supported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 4
+      },
+      "unsupported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 3
+      },
+      "n_vignette_claims": 19,
+      "n_vignette_mentioned": 7,
+      "n_vignette_not_mentioned": 12,
+      "coverage_rate": 0.3684,
+      "unsupported_rate": 0.4286,
+      "confirmed_rate": 1.0,
+      "contradiction_rate": 0.0,
+      "summary": "The simulated patient demonstrated excellent factual fidelity, with all supported claims accurately reflecting the vignette and all unsupported claims being clinically expected elaborations consistent with the patient's profile. No contradictions or distortions were identified. However, several vignette details (e.g., period duration of 6-7 days, age, lack of chronic conditions, allergies, medications, and family history) were never mentioned in the conversation, representing coverage gaps."
+    },
+    "11": {
+      "total_claims": 13,
+      "n_supported": 9,
+      "n_unsupported": 4,
+      "mean_accuracy": 4.0,
+      "mean_plausibility": 3.25,
+      "supported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 9
+      },
+      "unsupported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 3,
+        "4": 1
+      },
+      "n_vignette_claims": 25,
+      "n_vignette_mentioned": 9,
+      "n_vignette_not_mentioned": 16,
+      "coverage_rate": 0.36,
+      "unsupported_rate": 0.3077,
+      "confirmed_rate": 1.0,
+      "contradiction_rate": 0.0,
+      "summary": "The simulated patient demonstrated high factual fidelity, with all supported claims accurately reflecting the vignette and no contradictions. Unsupported claims (episode frequency, duration, denial of syncope, and supplement use) were all plausible or expected fabrications. However, many vignette details\u2014including demographics, smoking history, surgical history, family history, immunizations, and recent cardiology follow-up\u2014were never raised in the conversation, leaving significant coverage gaps."
+    },
+    "14": {
+      "total_claims": 15,
+      "n_supported": 8,
+      "n_unsupported": 7,
+      "mean_accuracy": 3.875,
+      "mean_plausibility": 4.0,
+      "supported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 1,
+        "4": 7
+      },
+      "unsupported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 7
+      },
+      "n_vignette_claims": 15,
+      "n_vignette_mentioned": 6,
+      "n_vignette_not_mentioned": 9,
+      "coverage_rate": 0.4,
+      "unsupported_rate": 0.4667,
+      "confirmed_rate": 0.875,
+      "contradiction_rate": 0.0,
+      "summary": "The simulated patient demonstrated excellent factual fidelity, accurately conveying all discussed vignette claims and fabricating highly plausible responses to questions not covered by the vignette. All unsupported claims were clinically expected denials consistent with the patient's BPH profile. However, several vignette details including demographics, family history, allergies, and recent urologist follow-up were never raised during the conversation."
+    },
+    "40": {
+      "total_claims": 7,
+      "n_supported": 4,
+      "n_unsupported": 3,
+      "mean_accuracy": 4.0,
+      "mean_plausibility": 4.0,
+      "supported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 4
+      },
+      "unsupported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 3
+      },
+      "n_vignette_claims": 21,
+      "n_vignette_mentioned": 5,
+      "n_vignette_not_mentioned": 16,
+      "coverage_rate": 0.2381,
+      "unsupported_rate": 0.4286,
+      "confirmed_rate": 1.0,
+      "contradiction_rate": 0.0,
+      "summary": "The simulated patient demonstrated high factual fidelity for the claims it made, with all supported claims accurately reflecting the vignette. Unsupported claims were clinically expected and consistent with the patient's profile. However, the conversation covered only a small portion of the vignette, leaving many important details unmentioned, including demographics, hygiene habits, family history, medication status, and additional review of systems findings."
+    },
+    "6": {
+      "total_claims": 9,
+      "n_supported": 6,
+      "n_unsupported": 3,
+      "mean_accuracy": 4.0,
+      "mean_plausibility": 4.0,
+      "supported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 6
+      },
+      "unsupported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 3
+      },
+      "n_vignette_claims": 25,
+      "n_vignette_mentioned": 8,
+      "n_vignette_not_mentioned": 17,
+      "coverage_rate": 0.32,
+      "unsupported_rate": 0.3333,
+      "confirmed_rate": 1.0,
+      "contradiction_rate": 0.0,
+      "summary": "The simulated patient demonstrated excellent factual fidelity, with all supported claims accurately reflecting the vignette and all unsupported/fabricated claims being clinically expected for the patient's profile. However, there are significant coverage gaps: the patient did not mention key details such as age, college student status, known gynecomastia history, lump characteristics (rubbery, mobile, subareolar location), immunization history, family/medical history, or allergies, suggesting the conversation was relatively brief or the doctor did not probe these areas."
+    },
+    "34": {
+      "total_claims": 17,
+      "n_supported": 5,
+      "n_unsupported": 12,
+      "mean_accuracy": 4.0,
+      "mean_plausibility": 3.75,
+      "supported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 5
+      },
+      "unsupported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 3,
+        "4": 9
+      },
+      "n_vignette_claims": 20,
+      "n_vignette_mentioned": 8,
+      "n_vignette_not_mentioned": 12,
+      "coverage_rate": 0.4,
+      "unsupported_rate": 0.7059,
+      "confirmed_rate": 1.0,
+      "contradiction_rate": 0.0,
+      "summary": "The simulated patient demonstrated high factual fidelity, accurately conveying all key vignette facts that were discussed (worsening jaundice over one month, liver disease history, spironolactone 100mg daily). Fabricated responses to clinical screening questions were consistently plausible to expected, appropriately denying alarming symptoms in line with the vignette's characterization of a patient with stable liver function and no new concerning symptoms. Several vignette details (demographics, immunizations, allergies, family history, hepatologist follow-up details) were never raised in conversation, representing coverage gaps rather than errors."
+    },
+    "30": {
+      "total_claims": 12,
+      "n_supported": 5,
+      "n_unsupported": 7,
+      "mean_accuracy": 4.0,
+      "mean_plausibility": 3.857,
+      "supported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 5
+      },
+      "unsupported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 1,
+        "4": 6
+      },
+      "n_vignette_claims": 38,
+      "n_vignette_mentioned": 6,
+      "n_vignette_not_mentioned": 32,
+      "coverage_rate": 0.1579,
+      "unsupported_rate": 0.5833,
+      "confirmed_rate": 1.0,
+      "contradiction_rate": 0.0,
+      "summary": "The simulated patient demonstrated excellent factual fidelity for the claims that were discussed: all supported claims were fully accurate, and all unsupported (fabricated) claims were clinically expected or plausible for this patient profile. However, the conversation covered only a small fraction of the vignette, leaving the majority of history, review of systems, social history, and family history unexplored."
+    },
+    "26": {
+      "total_claims": 13,
+      "n_supported": 8,
+      "n_unsupported": 5,
+      "mean_accuracy": 4.0,
+      "mean_plausibility": 4.0,
+      "supported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 8
+      },
+      "unsupported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 5
+      },
+      "n_vignette_claims": 25,
+      "n_vignette_mentioned": 7,
+      "n_vignette_not_mentioned": 18,
+      "coverage_rate": 0.28,
+      "unsupported_rate": 0.3846,
+      "confirmed_rate": 1.0,
+      "contradiction_rate": 0.0,
+      "summary": "The simulated patient demonstrated excellent factual fidelity, with all supported claims rated as accurate and all unsupported (fabricated) claims rated as expected given the clinical profile. However, there were significant coverage gaps: key history elements such as age, family history of breast cancer, prior breast cyst, medications, allergies, mammogram results, and lump characteristics (soft, mobile, location) were never mentioned during the conversation."
+    },
+    "27": {
+      "total_claims": 14,
+      "n_supported": 7,
+      "n_unsupported": 7,
+      "mean_accuracy": 4.0,
+      "mean_plausibility": 3.571,
+      "supported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 7
+      },
+      "unsupported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 3,
+        "4": 4
+      },
+      "n_vignette_claims": 23,
+      "n_vignette_mentioned": 7,
+      "n_vignette_not_mentioned": 16,
+      "coverage_rate": 0.3043,
+      "unsupported_rate": 0.5,
+      "confirmed_rate": 1.0,
+      "contradiction_rate": 0.0,
+      "summary": "The simulated patient demonstrated high factual fidelity, accurately conveying all key presenting complaint details (anal pain duration, character, aggravating factors) and medication information. Unsupported claims (e.g., denying fever, swelling, drainage, blood thinners) were all clinically expected or plausible given the vignette profile. However, many background details such as demographics, medical history, immunizations, and family history were never raised in the conversation, representing significant coverage gaps."
+    },
+    "5": {
+      "total_claims": 11,
+      "n_supported": 9,
+      "n_unsupported": 2,
+      "mean_accuracy": 4.0,
+      "mean_plausibility": 4.0,
+      "supported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 9
+      },
+      "unsupported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 2
+      },
+      "n_vignette_claims": 20,
+      "n_vignette_mentioned": 8,
+      "n_vignette_not_mentioned": 12,
+      "coverage_rate": 0.4,
+      "unsupported_rate": 0.1818,
+      "confirmed_rate": 1.0,
+      "contradiction_rate": 0.0,
+      "summary": "The simulated patient demonstrated excellent factual fidelity, with all supported claims accurately reflecting the vignette and unsupported claims being clinically expected denials. However, there are notable coverage gaps: the patient did not mention important history elements including personal history of asthma, eczema, allergic rhinitis, family history of atopic conditions, occupation, outdoor exposure, or partial medication relief, which could be clinically relevant if not elicited by the doctor."
+    },
+    "24": {
+      "total_claims": 11,
+      "n_supported": 8,
+      "n_unsupported": 3,
+      "mean_accuracy": 4.0,
+      "mean_plausibility": 3.667,
+      "supported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 8
+      },
+      "unsupported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 1,
+        "4": 2
+      },
+      "n_vignette_claims": 17,
+      "n_vignette_mentioned": 7,
+      "n_vignette_not_mentioned": 10,
+      "coverage_rate": 0.4118,
+      "unsupported_rate": 0.2727,
+      "confirmed_rate": 1.0,
+      "contradiction_rate": 0.0,
+      "summary": "The simulated patient demonstrated excellent factual fidelity, with all supported claims fully accurate and consistent with the vignette. Unsupported claims (denying headache, weakness/numbness, and contact lens use) were clinically appropriate fabrications. However, there were significant coverage gaps, as the patient did not mention key background details such as demographics, medication use, surgical history, allergy status, or recent ophthalmology follow-up."
+    },
+    "28": {
+      "total_claims": 17,
+      "n_supported": 10,
+      "n_unsupported": 7,
+      "mean_accuracy": 3.9,
+      "mean_plausibility": 3.714,
+      "supported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 1,
+        "4": 9
+      },
+      "unsupported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 2,
+        "4": 5
+      },
+      "n_vignette_claims": 38,
+      "n_vignette_mentioned": 10,
+      "n_vignette_not_mentioned": 28,
+      "coverage_rate": 0.2632,
+      "unsupported_rate": 0.4118,
+      "confirmed_rate": 0.9,
+      "contradiction_rate": 0.0,
+      "summary": "The simulated patient demonstrated high factual fidelity, with all supported claims accurately reflecting the vignette and no contradictions. Unsupported claims were consistently plausible or expected given the patient's clinical profile. However, a large number of vignette claims were never raised in the conversation, indicating limited coverage of the full clinical history."
+    },
+    "16": {
+      "total_claims": 12,
+      "n_supported": 8,
+      "n_unsupported": 4,
+      "mean_accuracy": 4.0,
+      "mean_plausibility": 3.75,
+      "supported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 8
+      },
+      "unsupported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 1,
+        "4": 3
+      },
+      "n_vignette_claims": 36,
+      "n_vignette_mentioned": 7,
+      "n_vignette_not_mentioned": 29,
+      "coverage_rate": 0.1944,
+      "unsupported_rate": 0.3333,
+      "confirmed_rate": 1.0,
+      "contradiction_rate": 0.0,
+      "summary": "The simulated patient demonstrated excellent factual fidelity for all claims made during the conversation, with no contradictions or distortions. All supported claims were accurate, and the few unsupported claims (denying weakness, neck pain, and radiating arm pain) were clinically expected given the patient's profile. However, a large number of vignette details \u2014 including demographic information, lifestyle factors, family history, allergies, and most review-of-systems negatives \u2014 were never raised during the conversation, indicating limited coverage."
+    },
+    "17": {
+      "total_claims": 19,
+      "n_supported": 15,
+      "n_unsupported": 4,
+      "mean_accuracy": 3.867,
+      "mean_plausibility": 3.75,
+      "supported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 2,
+        "4": 13
+      },
+      "unsupported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 1,
+        "4": 3
+      },
+      "n_vignette_claims": 30,
+      "n_vignette_mentioned": 16,
+      "n_vignette_not_mentioned": 14,
+      "coverage_rate": 0.5333,
+      "unsupported_rate": 0.2105,
+      "confirmed_rate": 0.8667,
+      "contradiction_rate": 0.0,
+      "summary": "The simulated patient demonstrated high factual fidelity, with all supported claims accurately reflecting the vignette or being only slightly imprecise (e.g., not naming specific medications). Unsupported claims were all clinically expected or plausible given the patient's profile. However, several important vignette details were never mentioned, including smoking history, codeine allergy, surgical history, and specific medication names, representing significant coverage gaps."
+    },
+    "3": {
+      "total_claims": 8,
+      "n_supported": 6,
+      "n_unsupported": 2,
+      "mean_accuracy": 4.0,
+      "mean_plausibility": 4.0,
+      "supported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 6
+      },
+      "unsupported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 2
+      },
+      "n_vignette_claims": 26,
+      "n_vignette_mentioned": 6,
+      "n_vignette_not_mentioned": 20,
+      "coverage_rate": 0.2308,
+      "unsupported_rate": 0.25,
+      "confirmed_rate": 1.0,
+      "contradiction_rate": 0.0,
+      "summary": "The simulated patient demonstrated excellent factual fidelity across all claims made in the conversation. All supported claims were fully accurate with no distortions or contradictions. The two unsupported claims (bilateral involvement and variable finger involvement) are clinically expected elaborations for Raynaud's phenomenon. However, a large portion of the vignette information was never raised, indicating limited conversational coverage."
+    },
+    "9": {
+      "total_claims": 11,
+      "n_supported": 11,
+      "n_unsupported": 0,
+      "mean_accuracy": 4.0,
+      "mean_plausibility": 0.0,
+      "supported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 11
+      },
+      "unsupported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0
+      },
+      "n_vignette_claims": 29,
+      "n_vignette_mentioned": 12,
+      "n_vignette_not_mentioned": 17,
+      "coverage_rate": 0.4138,
+      "unsupported_rate": 0.0,
+      "confirmed_rate": 1.0,
+      "contradiction_rate": 0.0,
+      "summary": "The simulated patient demonstrated excellent factual fidelity for all claims made in the conversation, with every claim accurately reflecting the vignette. However, there were significant coverage gaps: notable details such as the patient's age, occupation, medical history of GAD, family history, tingling/paresthesias, tachycardia heart rate, and the intense fear of dying were never mentioned during the conversation."
+    },
+    "7": {
+      "total_claims": 15,
+      "n_supported": 7,
+      "n_unsupported": 8,
+      "mean_accuracy": 3.714,
+      "mean_plausibility": 3.625,
+      "supported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 2,
+        "4": 5
+      },
+      "unsupported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 3,
+        "4": 5
+      },
+      "n_vignette_claims": 22,
+      "n_vignette_mentioned": 11,
+      "n_vignette_not_mentioned": 11,
+      "coverage_rate": 0.5,
+      "unsupported_rate": 0.5333,
+      "confirmed_rate": 0.7143,
+      "contradiction_rate": 0.0,
+      "summary": "The simulated patient demonstrated high factual fidelity, accurately conveying the core presentation of recurrent hypoglycemic episodes, their timing, associated symptoms, and response to sugar intake. Unsupported claims (fabricated answers to doctor questions) were uniformly plausible or expected given the clinical profile. Notable coverage gaps include the patient's demographics, family history, palpitations, and the temporal link between the new medication and symptom onset."
+    },
+    "46": {
+      "total_claims": 9,
+      "n_supported": 8,
+      "n_unsupported": 1,
+      "mean_accuracy": 4.0,
+      "mean_plausibility": 3.0,
+      "supported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 8
+      },
+      "unsupported_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 1,
+        "4": 0
+      },
+      "n_vignette_claims": 26,
+      "n_vignette_mentioned": 7,
+      "n_vignette_not_mentioned": 19,
+      "coverage_rate": 0.2692,
+      "unsupported_rate": 0.1111,
+      "confirmed_rate": 1.0,
+      "contradiction_rate": 0.0,
+      "summary": "The simulated patient demonstrated excellent factual fidelity in the early portion of the conversation, accurately conveying the key features of the chief complaint including onset, character, aggravating and relieving factors, and absence of trauma. The one unsupported claim (pain rated 7/10) was plausible. However, a large number of vignette claims remain unmentioned, suggesting the conversation covered only the initial history of present illness and did not progress to past medical history, medications, family history, or review of systems."
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "levels": [
+    {
+      "level": "minimal",
+      "target_range": "1-5",
+      "mean_words": 6.9,
+      "compliance_rate": 0.4026,
+      "n_compliant": 122,
+      "n_turns": 303
+    },
+    {
+      "level": "very_brief",
+      "target_range": "0-15",
+      "mean_words": 13.7,
+      "compliance_rate": 0.7042,
+      "n_compliant": 200,
+      "n_turns": 284
+    },
+    {
+      "level": "brief",
+      "target_range": "15-30",
+      "mean_words": 21.7,
+      "compliance_rate": 0.7862,
+      "n_compliant": 228,
+      "n_turns": 290
+    },
+    {
+      "level": "moderate",
+      "target_range": "30-60",
+      "mean_words": 30.3,
+      "compliance_rate": 0.5613,
+      "n_compliant": 151,
+      "n_turns": 269
+    },
+    {
+      "level": "verbose",
+      "target_range": "60-100",
+      "mean_words": 49.3,
+      "compliance_rate": 0.4022,
+      "n_compliant": 109,
+      "n_turns": 271
+    }
+  ],
+  "ordering_holds": true,
+  "ordering_detail": "minimal(6.9) < very_brief(13.7) < brief(21.7) < moderate(30.3) < verbose(49.3)"
+}

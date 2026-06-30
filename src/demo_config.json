@@ -1,0 +1,47 @@
+{
+  "input": {
+    "vignette": "38-year-old man. Acute right knee pain since yesterday evening after twisting injury playing football. Immediate swelling and difficulty fully weight-bearing. Pain 6/10 at rest, 9/10 on movement. No prior knee injuries. No locking or giving way noted yet. Neurovascularly intact distally. Takes ibuprofen 400mg with partial relief.",
+    "ehr_json": null,
+    "prior_conversation": null,
+    "environment": "Patient is at home in the evening after playing football earlier in the day. Resting on the sofa with his leg elevated, messaging on his phone. Worried about being able to get to work tomorrow.",
+    "setting": "verily_me_app",
+    "task": "urgency_assessment",
+    "symptom_category": "musculoskeletal"
+  },
+  "persona_params": {
+    "anxiety": "anxious",
+    "socioeconomic_context": "Works full-time, cannot afford time off — concerned a knee injury means missing work",
+    "cultural_context": null
+  },
+  "content_params": {
+    "recall_level": "normal",
+    "oversharing_tendency": "no",
+    "topic_sensitivity": []
+  },
+  "communication_params": {
+    "health_literacy": "medium",
+    "verbosity": "moderate",
+    "communication_style": "formal",
+    "english_proficiency": "native",
+    "profanity_level": "no",
+    "typo_rate": "no",
+    "abbreviation_tendency": "no",
+    "punctuation_style": "standard",
+    "capitalisation": "standard"
+  },
+  "strategy_params": {
+    "patient_goal": "Get reassurance that the knee injury is not serious and confirm I can safely go to work tomorrow."
+  },
+  "stop_params": {
+    "gives_up": true,
+    "max_turns": null,
+    "stops_when_goal_met": true
+  },
+  "orchestrator_params": {
+    "enable_feelings": true,
+    "enable_strategy": true
+  },
+  "technical": {
+    "thread_id": null
+  }
+}

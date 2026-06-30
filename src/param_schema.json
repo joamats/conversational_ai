@@ -1,0 +1,577 @@
+{
+  "groups": [
+    {
+      "id": "input_params",
+      "label": "Input",
+      "open": true,
+      "params": {
+        "setting": {
+          "label": "Setting",
+          "description": "Communication channel — determines medium-specific speech conventions injected into the communication node.",
+          "type": "category",
+          "default": "verily_me_app",
+          "prompt_additions_for": [
+            "communication"
+          ],
+          "categories": {
+            "verily_me_app": {
+              "label": "Verily Me App",
+              "description": "Async mobile health app — typed, not spoken.",
+              "prompt_addition": "The patient is communicating via the Verily Me health app on their smartphone, typing from home. This is an asynchronous text-based exchange, not a spoken conversation. Treat each message as a typed reply on a mobile keyboard."
+            },
+            "general_llm": {
+              "label": "General-purpose LLM",
+              "description": "Generic conversational AI interface — no channel-specific conventions applied.",
+              "prompt_addition": ""
+            }
+          }
+        },
+        "task": {
+          "label": "Clinician Task",
+          "description": "The AI clinician's role in this encounter — sets the context for what kind of help the patient expects to receive.",
+          "type": "category",
+          "default": "urgency_assessment",
+          "prompt_additions_for": [
+            "communication",
+            "strategy"
+          ],
+          "categories": {
+            "health_advice": {
+              "label": "Health Advice",
+              "description": "Clinician provides evidence-based health guidance and lifestyle recommendations.",
+              "prompt_addition": "The AI clinician is a general health advisor providing evidence-based guidance and lifestyle recommendations. The patient understands the assistant is here for health guidance, not to diagnose or prescribe."
+            },
+            "diagnosis": {
+              "label": "Diagnosis",
+              "description": "Clinician assesses symptoms and provides diagnostic impressions.",
+              "prompt_addition": "The AI clinician assesses symptoms and helps the patient understand what might be causing them. The patient expects the assistant to help make sense of their condition and suggest next steps."
+            },
+            "urgency_assessment": {
+              "label": "Urgency Assessment",
+              "description": "Clinician triages symptoms to determine how urgently the patient needs care.",
+              "prompt_addition": "The AI clinician triages symptoms to determine urgency. The patient wants to know whether their condition requires immediate attention, a routine appointment, or can safely wait."
+            },
+            "prescription": {
+              "label": "Prescription",
+              "description": "Clinician reviews medications and can renew or issue prescriptions.",
+              "prompt_addition": "The AI clinician can review medications, advise on dosing, and handle prescription renewals. The patient is aware they can ask about specific medications or request refills through this interaction."
+            },
+            "side_effects": {
+              "label": "Side Effects",
+              "description": "Clinician specialises in medication side effects and drug interactions.",
+              "prompt_addition": "The AI clinician specialises in medication side effects and drug interactions. The patient may raise concerns about how their current medications are making them feel, or whether two drugs are safe to take together."
+            },
+            "insurance": {
+              "label": "Insurance Info",
+              "description": "Clinician helps navigate health insurance coverage, costs, and access to care.",
+              "prompt_addition": "The AI clinician helps patients navigate health insurance — coverage questions, co-pays, prior authorisations, and finding in-network providers. The patient may have questions about costs or accessing care."
+            },
+            "motivational_interviewing": {
+              "label": "Motivational Interviewing",
+              "description": "Clinician uses MI techniques to help the patient explore ambivalence around behaviour change.",
+              "prompt_addition": "The AI clinician is conducting a motivational interviewing session, helping the patient explore their readiness and motivation for health behaviour change. The patient may be ambivalent, resistant, or uncertain about making changes to their lifestyle or treatment."
+            }
+          }
+        },
+        "mother_tongue": {
+          "label": "Mother Tongue",
+          "description": "Patient's native language. When set alongside a non-native english_proficiency, the patient may occasionally use words, fillers, or phrases from their mother tongue when searching for an English word. Leave blank if not applicable.",
+          "type": "text_optional",
+          "default": null,
+          "prompt_additions_for": null
+        }
+      }
+    },
+    {
+      "id": "persona_params",
+      "label": "Persona",
+      "open": true,
+      "params": {
+        "anxiety": {
+          "label": "Anxiety",
+          "description": "Baseline anxiety level. Anxious patients seek reassurance, catastrophise, and return to worries even after reassurance.",
+          "type": "category",
+          "default": "neutral",
+          "prompt_additions_for": [
+            "feelings",
+            "communication"
+          ],
+          "categories": {
+            "neutral": {
+              "label": "Neutral",
+              "description": "No notable anxiety — responds to questions calmly.",
+              "prompt_addition": "The patient is calm. They accept information at face value and do not catastrophise or seek repeated reassurance."
+            },
+            "anxious": {
+              "label": "Anxious",
+              "description": "On edge, seeking reassurance, prone to catastrophising.",
+              "prompt_addition": "The patient is anxious. Anxiety shows through catastrophising about specific outcomes ('what if this turns out to be something really bad?'), difficulty absorbing information ('sorry, can you say that again?'), second-guessing their own memory ('wait, was it Monday or Tuesday?'), and volunteering worst-case fears unprompted. These are distinct from calmly asking about urgency — the patient is visibly struggling to stay composed, not just seeking triage information."
+            }
+          }
+        },
+        "frustration": {
+          "label": "Frustration",
+          "description": "Whether the patient expresses overt frustration or anger during the conversation, using expletives and blunt language.",
+          "type": "category",
+          "default": "no",
+          "prompt_additions_for": [
+            "feelings",
+            "communication"
+          ],
+          "categories": {
+            "no": {
+              "label": "No",
+              "description": "No overt frustration — the patient remains composed.",
+              "prompt_addition": "The patient is even-tempered and cooperative throughout. No expletives or complaints about the process."
+            },
+            "yes": {
+              "label": "Yes",
+              "description": "Patient is visibly frustrated and uses strong language.",
+              "prompt_addition": "The patient starts frustrated, using strong language and expletives. Frustration may ease if the doctor is responsive, or intensify if evasive. Express it in a few turns, not all of them. Vary the words and expressions."
+            }
+          }
+        },
+        "patience": {
+          "label": "Patience",
+          "description": "Tolerance for the pace of the conversation. Impatient patients start irritable and grow progressively more terse and disengaged as the conversation extends.",
+          "type": "category",
+          "default": "neutral",
+          "prompt_additions_for": [
+            "feelings",
+            "communication"
+          ],
+          "categories": {
+            "neutral": {
+              "label": "Neutral",
+              "description": "Normal patience — no particular time pressure.",
+              "prompt_addition": "The patient has no time pressure. They answer willingly regardless of how many questions are asked."
+            },
+            "impatient": {
+              "label": "Impatient",
+              "description": "Starts irritable and grows progressively more terse and disengaged over the course of the conversation. Responses become shorter and more clipped over time.",
+              "prompt_addition": "The patient is pressed for time. Early turns: cooperative but brief. Mid-conversation: starts skipping sub-questions, gives one-word answers to yes/no questions, redirects ('can we get to the point?'). Late turns: single-sentence answers, dismisses follow-ups as irrelevant ('I already told you that'). The progressive shortening should be clearly visible across the conversation arc."
+            }
+          }
+        },
+        "trust": {
+          "label": "Scepticism",
+          "description": "How much the patient trusts the healthcare system and this clinician. Sceptical patients question advice and are reluctant to share personal details.",
+          "type": "category",
+          "default": "trustful",
+          "prompt_additions_for": [
+            "feelings",
+            "communication"
+          ],
+          "categories": {
+            "trustful": {
+              "label": "Trustful",
+              "description": "Takes clinician guidance at face value; cooperative and open.",
+              "prompt_addition": "The patient trusts the clinician. They answer openly, accept recommendations cooperatively, and do not question the doctor's reasoning."
+            },
+            "sceptical": {
+              "label": "Sceptical",
+              "description": "Questions advice, prefers to verify independently, guarded about personal details.",
+              "prompt_addition": "The patient distrusts this clinician. They push back on reasoning ('why do you need to know that?', 'how does that help?'), reference what they read online or heard from someone else, and give guarded answers to personal questions. They do not instantly accept the doctor's framing — if the doctor says 'it's probably nothing', the patient expresses residual doubt."
+            }
+          }
+        },
+        "embarrassment": {
+          "label": "Embarrassment",
+          "description": "Degree of embarrassment around their symptoms or reason for the visit. Embarrassed patients use euphemisms and need direct prompting.",
+          "type": "category",
+          "default": "neutral",
+          "prompt_additions_for": [
+            "feelings",
+            "communication"
+          ],
+          "categories": {
+            "neutral": {
+              "label": "Neutral",
+              "description": "Comfortable discussing any symptom without embarrassment.",
+              "prompt_addition": "The patient discusses all symptoms directly and comfortably, including intimate topics. No euphemisms or hesitation."
+            },
+            "embarrassed": {
+              "label": "Embarrassed",
+              "description": "Awkward disclosing symptoms; uses euphemisms and trails off.",
+              "prompt_addition": "The patient is embarrassed about their symptoms. They use euphemisms ('down there', 'the problem'), trail off mid-sentence when approaching the embarrassing detail, and need direct prompting to disclose specifics. They may preface with 'this is awkward but...' or 'I don't usually talk about this'. When the doctor asks follow-ups about the embarrassing topic, the patient gives minimal answers and tries to move on."
+            }
+          }
+        },
+        "socioeconomic_context": {
+          "label": "Socioeconomic Context",
+          "description": "Free-text description of the patient's socioeconomic situation. Informs the ingest profile and influences the feelings/strategy nodes' sense of what is at stake for this patient.",
+          "type": "text_optional",
+          "default": null,
+          "prompt_additions_for": null
+        },
+        "cultural_context": {
+          "label": "Cultural Context",
+          "description": "Free-text description of cultural background. Applied as a language surface instruction in the communication node.",
+          "type": "text_optional",
+          "default": null,
+          "prompt_additions_for": null
+        }
+      }
+    },
+    {
+      "id": "content_params",
+      "label": "Content",
+      "open": false,
+      "params": {
+        "recall_level": {
+          "label": "Recall Level",
+          "description": "How accurately the patient remembers clinical facts. Owned exclusively by the content node — determines factual availability and recall errors. Does not affect emotional tone (feelings node).",
+          "type": "category",
+          "default": "normal",
+          "prompt_additions_for": null,
+          "categories": {
+            "high": {
+              "label": "High",
+              "description": "Accurate, precise recall — correct dates, doses, sequences.",
+              "prompt_addition": "The patient has excellent recall and volunteers precise details unprompted — exact dates ('it started last Tuesday, the 6th'), specific medication details ('lisinopril 10mg, once in the morning'), and detailed timelines ('first the headache, then about an hour later the nausea started'). They correct vague questions with specifics and never hedge."
+            },
+            "normal": {
+              "label": "Normal",
+              "description": "Some imprecision — rounded numbers, vague dates, occasional uncertainty.",
+              "prompt_addition": "Normal recall — rounded numbers ('about two weeks'), approximate dates ('sometime last month'), occasional mild uncertainty ('I think it was...'). Neither impressive nor poor."
+            },
+            "low": {
+              "label": "Low",
+              "description": "Frequent uncertainty — forgotten medications, vague dates, unsure about details.",
+              "prompt_addition": "The patient has significant memory gaps and expresses genuine uncertainty — 'I don't remember', 'I'm not sure', 'maybe a few weeks ago?'. They forget medication names, give vague timeframes ('a while ago'), use approximate numbers ('I don't know, maybe a 5?'), and cannot recall parts of their history ('I don't remember if I have any conditions'). IMPORTANT: Do NOT fabricate wrong clinical facts (wrong severity, wrong dates, wrong symptoms). Low recall means MORE UNCERTAINTY, not wrong information."
+            }
+          }
+        },
+        "oversharing_tendency": {
+          "label": "Oversharing",
+          "description": "Whether the patient volunteers unsolicited information beyond what is asked.",
+          "type": "category",
+          "default": "no",
+          "prompt_additions_for": [
+            "communication",
+            "content"
+          ],
+          "categories": {
+            "no": {
+              "label": "No",
+              "description": "Shares only what is directly asked — minimal, to-the-point responses.",
+              "prompt_addition": "The patient answers only what is asked. They lead with their chief complaint and share additional symptoms only when specifically asked. No volunteered backstory, worries, or tangential context."
+            },
+            "yes": {
+              "label": "Yes",
+              "description": "Provides lots of unsolicited context, tangential details, and related concerns.",
+              "prompt_addition": "The patient volunteers more than asked. When answering a question, they add unsolicited context: what they were doing when it started, a similar episode a family member had, life circumstances ('I've been really stressed since I changed jobs'), self-research ('I looked it up and it said it could be...'), or emotional commentary ('it's been really worrying me'). Vary what kind of extra detail appears — not the same type every turn. Some turns may stay focused; most should include at least one tangent. The extra detail is purely about quantity of information shared — it does not change the patient's emotional state, anxiety level, vocabulary, or health literacy."
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "communication_params",
+      "label": "Communication",
+      "open": false,
+      "params": {
+        "language": {
+          "label": "Idiom",
+          "description": "Language language used by the patient. Placeholder for future non-English variants.",
+          "type": "category",
+          "default": "english",
+          "prompt_additions_for": null,
+          "categories": {
+            "english": {
+              "label": "English",
+              "description": "Standard English language.",
+              "prompt_addition": ""
+            }
+          }
+        },
+        "health_literacy": {
+          "label": "Health Literacy",
+          "description": "Patient's ability to access, understand, appraise, and apply health information. Shapes vocabulary, information sources cited, comprehension style, and how advice is applied.",
+          "type": "category",
+          "default": "medium",
+          "prompt_additions_for": null,
+          "categories": {
+            "low": {
+              "label": "Basic / Functional",
+              "description": "Body-part and everyday words only. Vague sources (son, neighbour). Partial comprehension, asks for clarification. Applies advice rigidly or incorrectly.",
+              "prompt_addition": "Basic health literacy. The patient uses everyday words only — 'belly' not 'abdomen', 'pee' not 'urinate', 'that thing the doctor checks' not 'blood pressure'. They never use words like 'symptoms', 'condition', 'significant', or 'medication' — they say 'what I feel', 'problem', 'bad', and 'the pills I take'. Never use specific drug names — say 'the pills I take', 'my heart medicine', or 'the white ones'. Avoid specific numbers: no '101 fever' or '80%' — say 'I had a fever' or 'most of the time'. Reference neighbours, relatives, or TV as information sources ('my neighbour had the same thing...', 'my sister told me...'). Sentences are short and simple. Occasionally (1–2 times per conversation), ask what a term means if the doctor uses a complex medical word ('what does that mean?', 'sorry, what's that?')."
+            },
+            "medium": {
+              "label": "Communicative / Interactive",
+              "description": "Common clinic words. References at least one appropriate source. Generally understands; some scepticism. Applies advice appropriately.",
+              "prompt_addition": "Communicative health literacy. Common clinic words (infection, swelling, blood pressure, dose, side effects) but no specialist terminology. Knows medication names but not mechanisms or detailed pharmacology. Uses rough numbers ('about 100 fever', 'I think it was high') but not precise lab values. Generally understands and can restate information in their own words. Does not reference medical literature or challenge clinical reasoning."
+            },
+            "high": {
+              "label": "Critical",
+              "description": "Advanced medical and analytical terms. Multiple strategic sources (e.g., PubMed). Critically evaluates evidence. Adapts advice flexibly with explanation.",
+              "prompt_addition": "Critical health literacy. The patient uses medical terminology naturally and precisely, even when the doctor uses simpler language — e.g., says 'bilateral oedema' not 'swelling', 'paresthesia' not 'tingling', 'tachycardia' not 'fast heart rate'. Uses specific numbers: exact temperatures ('101.3'), lab values ('my A1c was 7.2'), doses ('lisinopril 20mg'), and percentages. References evidence-based sources ('I read on UpToDate...', 'the meta-analysis I saw suggested...'). Critically evaluates what the doctor says and may push back or ask for the reasoning behind a recommendation."
+            }
+          }
+        },
+        "verbosity": {
+          "label": "Verbosity",
+          "description": "Target number of sentences per patient turn (±1 tolerance). Resolved to an integer in the communication node prompt.",
+          "type": "category",
+          "default": "moderate",
+          "prompt_additions_for": null,
+          "categories": {
+            "minimal": {
+              "label": "Minimal — 1–5 words",
+              "description": "Mono-word or ultra-short fragment — yes/no, a symptom name, or a bare-minimum answer.",
+              "prompt_addition": "Average around 1–5 words per turn. Some turns can be a single word ('No', 'Yes', 'Fine'). Occasionally a turn may stretch to 8–10 words when the content naturally calls for it. The overall conversation should feel ultra-terse."
+            },
+            "very_brief": {
+              "label": "Very Brief — ≤ 15 words",
+              "description": "Extremely short — a few words or one clipped phrase.",
+              "prompt_addition": "Average around 10–15 words per turn, but vary naturally. Yes/no questions get 1–3 words. Open questions may get up to 20–25 words. Not every turn needs to hit the target — the conversation average matters, not each individual turn."
+            },
+            "brief": {
+              "label": "Brief — 15–30 words",
+              "description": "Short, tight response — one clear idea only.",
+              "prompt_addition": "Average around 15–30 words per turn, but vary naturally. Simple questions get shorter answers (5–10 words). Complex questions may stretch to 35–40 words. The conversation average matters, not each individual turn."
+            },
+            "moderate": {
+              "label": "Moderate — 30–60 words",
+              "description": "Balanced response — room for a main point and brief context.",
+              "prompt_addition": "Average around 30–60 words per turn, but vary naturally. Simple yes/no questions deserve short answers (5–15 words). Symptom descriptions or complex questions may run to 70–80 words. The conversation average matters, not each individual turn."
+            },
+            "verbose": {
+              "label": "Verbose — 60–100 words",
+              "description": "Detailed response — several points with context.",
+              "prompt_addition": "Average around 60–100 words per turn, but vary naturally. Simple questions can get 20–30 word answers. Complex topics or emotional moments may run to 120+ words. The conversation average matters, not each individual turn."
+            }
+          }
+        },
+        "communication_style": {
+          "label": "Communication Style",
+          "description": "Register and formality of the patient's language. Injected as a prose addition into the communication node.",
+          "type": "category",
+          "default": "formal",
+          "prompt_additions_for": [
+            "communication"
+          ],
+          "categories": {
+            "formal": {
+              "label": "Formal",
+              "description": "Polished, grammatically complete sentences — no contractions.",
+              "prompt_addition": "Use formal, polished language. Complete grammatical sentences. Polite phrasing ('I would appreciate', 'If possible'). No contractions."
+            },
+            "informal": {
+              "label": "Informal",
+              "description": "Casual, conversational — contractions and imperfect sentences.",
+              "prompt_addition": "Use casual, natural language. Contractions ('I'm', 'don't', 'it's'). Conversational tone. Sentences need not be perfectly structured."
+            }
+          }
+        },
+        "typo_rate": {
+          "label": "Typos",
+          "description": "Whether the patient makes frequent typing errors. Injected into the communication node.",
+          "type": "category",
+          "default": "no",
+          "prompt_additions_for": [
+            "communication"
+          ],
+          "categories": {
+            "no": {
+              "label": "No",
+              "description": "No typos.",
+              "prompt_addition": "The patient types cleanly with no spelling errors."
+            },
+            "yes": {
+              "label": "Yes",
+              "description": "Frequent errors — some messages hard to parse.",
+              "prompt_addition": "The patient types on a phone and makes occasional typos — autocorrect swaps to a wrong real word ('thr' → 'the', 'form' → 'from'), skipped letters ('headahce', 'medicaiton'), or doubled letters ('aand', 'tthe'). Include a typo in roughly half the responses. Vary the position and type each turn."
+            }
+          }
+        },
+        "abbreviation_tendency": {
+          "label": "Abbreviations",
+          "description": "Whether the patient uses frequent informal shorthand and text-speak. Injected into the communication node.",
+          "type": "category",
+          "default": "no",
+          "prompt_additions_for": [
+            "communication"
+          ],
+          "categories": {
+            "no": {
+              "label": "No",
+              "description": "No abbreviations.",
+              "prompt_addition": "The patient writes all words in full — no text-speak or shorthand."
+            },
+            "yes": {
+              "label": "Yes",
+              "description": "Frequent text-speak — 'u', 'r', 'n', 'omg', 'idk'.",
+              "prompt_addition": "The patient texts casually and uses abbreviations — 'u' for 'you', 'bc' for 'because', 'rn' for 'right now', 'idk' for 'I don't know', 'tbh' for 'to be honest'. Include an abbreviation in roughly half the responses. It should feel natural, like someone texting a friend."
+            }
+          }
+        },
+        "punctuation_style": {
+          "label": "Punctuation Style",
+          "description": "How much punctuation the patient uses in typed messages. Injected into the communication node.",
+          "type": "category",
+          "default": "standard",
+          "prompt_additions_for": [
+            "communication"
+          ],
+          "categories": {
+            "standard": {
+              "label": "Standard",
+              "description": "Normal punctuation throughout.",
+              "prompt_addition": "Normal punctuation — full stops, question marks, commas where appropriate."
+            },
+            "none": {
+              "label": "None",
+              "description": "Almost no punctuation — sentences run together.",
+              "prompt_addition": "Use almost no punctuation. Sentences run together separated only by spaces. No full stops except very occasionally."
+            }
+          }
+        },
+        "capitalisation": {
+          "label": "Capitalisation",
+          "description": "Capitalisation pattern in the patient's typed messages. Injected into the communication node.",
+          "type": "category",
+          "default": "standard",
+          "prompt_additions_for": [
+            "communication"
+          ],
+          "categories": {
+            "standard": {
+              "label": "Standard",
+              "description": "Normal capitalisation.",
+              "prompt_addition": "Normal capitalisation — sentences start with capitals, proper nouns capitalised."
+            },
+            "all_lower": {
+              "label": "All Lowercase",
+              "description": "Almost entirely lowercase — only major proper nouns may be capitalised.",
+              "prompt_addition": "Write almost entirely in lower case. Only well-known proper nouns may occasionally be capitalised."
+            }
+          }
+        },
+        "english_proficiency": {
+          "label": "English Proficiency",
+          "description": "Whether the patient speaks English fluently. Non-proficient patients make consistent grammar errors, struggle with medical vocabulary, and lean on their native language. Injected into the communication node.",
+          "type": "category",
+          "default": "native",
+          "prompt_additions_for": [
+            "communication"
+          ],
+          "categories": {
+            "native": {
+              "label": "Fluent / Native",
+              "description": "Comfortable in English — no language-related adjustments.",
+              "prompt_addition": "Fluent native English — no language difficulties."
+            },
+            "non_proficient": {
+              "label": "Non-Proficient",
+              "description": "Struggles in English — grammar errors, vocabulary gaps, leans on native language.",
+              "prompt_addition": "The patient struggles with English. They cope by misunderstanding and answering wrong, agreeing without understanding, or answering only the part they caught. Grammar errors: wrong articles, tenses, missing function words. Use simpler or approximate words when the correct one is hard — 'pain in stomach' not 'abdominal pain', 'the blood thing' not 'blood pressure', 'it comes and goes' not 'intermittent'. If a medical term is unfamiliar, ask what it means once per conversation ('sorry, what is that?'). They may agree to something without fully understanding ('yes, ok') to avoid revealing confusion."
+            }
+          }
+        },
+        "profanity_level": {
+          "label": "Profanity",
+          "description": "Whether the patient uses expletives as part of their natural speech. Injected into the communication node.",
+          "type": "category",
+          "default": "no",
+          "prompt_additions_for": [
+            "communication"
+          ],
+          "categories": {
+            "no": {
+              "label": "No",
+              "description": "No profanity.",
+              "prompt_addition": "No expletives or swear words."
+            },
+            "yes": {
+              "label": "Yes",
+              "description": "Stronger language when stressed — authentic speech pattern, not aggression.",
+              "prompt_addition": "The patient swears naturally as emphasis or emotional punctuation. Varies in intensity across the conversation."
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "strategy_params",
+      "label": "Strategy",
+      "open": false,
+      "params": {
+        "gives_up": {
+          "label": "Patient Gives Up",
+          "description": "Whether the patient will end the conversation if the doctor repeatedly asks questions without offering any assessment or reassurance. Injected into communication and strategy nodes.",
+          "type": "bool",
+          "default": false,
+          "prompt_additions_for": [
+            "communication",
+            "strategy"
+          ],
+          "bool_additions": {
+            "true": "If the doctor keeps asking questions without offering any assessment or reassurance, the patient grows frustrated and may end the conversation.",
+            "false": "The patient remains engaged regardless of how many questions are asked."
+          }
+        },
+        "topic_sensitivity": {
+          "label": "Sensitive Topics",
+          "description": "Topics the patient is reluctant to discuss. Enter as comma-separated values (e.g. 'alcohol use, sexual history, recent job loss'). The patient will deflect or give minimal responses when these are raised.",
+          "type": "text_list",
+          "default": [],
+          "prompt_additions_for": [
+            "communication",
+            "content",
+            "strategy"
+          ]
+        },
+        "stops_when_goal_met": {
+          "label": "Stop When Goal Met",
+          "description": "Patient ends the conversation as soon as their primary visit goal is concretely satisfied by the doctor — e.g. they get the reassurance they came for, receive a prescription, or get their question answered. Mirrors realistic patient behaviour: once the need is met, they naturally wrap up.",
+          "type": "bool",
+          "default": true,
+          "prompt_additions_for": [
+            "strategy"
+          ],
+          "bool_additions": {
+            "true": "",
+            "false": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "technical_params",
+      "label": "Technical",
+      "open": false,
+      "params": {
+        "enable_feelings": {
+          "label": "Enable Feelings Node",
+          "description": "Include the feelings node (emotional tone reasoning) in the graph. When off, the node is omitted entirely — saving one model call per turn.",
+          "type": "bool",
+          "default": true,
+          "prompt_additions_for": null,
+          "bool_additions": {
+            "true": "",
+            "false": ""
+          }
+        },
+        "enable_strategy": {
+          "label": "Enable Strategy Node",
+          "description": "Include the strategy node (goal-directed behaviour reasoning) in the graph. When off, the node is omitted entirely — saving one model call per turn.",
+          "type": "bool",
+          "default": true,
+          "prompt_additions_for": null,
+          "bool_additions": {
+            "true": "",
+            "false": ""
+          }
+        },
+        "max_turns": {
+          "label": "Max Turns",
+          "description": "Hard upper limit on conversation length (integer). Leave empty or 0 for no limit.",
+          "type": "number",
+          "default": null,
+          "prompt_additions_for": null
+        }
+      }
+    }
+  ]
+}

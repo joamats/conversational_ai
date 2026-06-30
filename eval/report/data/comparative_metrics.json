@@ -1,0 +1,404 @@
+{
+  "macro_auc": 0.8941,
+  "per_param": {
+    "abbreviation_tendency": {
+      "auc": 0.86,
+      "n_pairs": 50,
+      "n_correct": 43,
+      "label": "Abbreviations",
+      "group_id": "communication_params"
+    },
+    "anxiety": {
+      "auc": 1.0,
+      "n_pairs": 50,
+      "n_correct": 50,
+      "label": "Anxiety",
+      "group_id": "persona_params"
+    },
+    "capitalisation": {
+      "auc": 1.0,
+      "n_pairs": 50,
+      "n_correct": 50,
+      "label": "Capitalisation",
+      "group_id": "communication_params"
+    },
+    "communication_style": {
+      "auc": 1.0,
+      "n_pairs": 50,
+      "n_correct": 50,
+      "label": "Communication Style",
+      "group_id": "communication_params"
+    },
+    "embarrassment": {
+      "auc": 0.94,
+      "n_pairs": 50,
+      "n_correct": 47,
+      "label": "Embarrassment",
+      "group_id": "persona_params"
+    },
+    "english_proficiency": {
+      "auc": 1.0,
+      "n_pairs": 50,
+      "n_correct": 50,
+      "label": "English Proficiency",
+      "group_id": "communication_params"
+    },
+    "frustration": {
+      "auc": 0.94,
+      "n_pairs": 50,
+      "n_correct": 47,
+      "label": "Frustration",
+      "group_id": "persona_params"
+    },
+    "health_literacy": {
+      "auc": 0.92,
+      "n_pairs": 100,
+      "n_correct": 92,
+      "label": "Health Literacy",
+      "group_id": "communication_params"
+    },
+    "oversharing_tendency": {
+      "auc": 0.68,
+      "n_pairs": 50,
+      "n_correct": 34,
+      "label": "Oversharing",
+      "group_id": "content_params"
+    },
+    "patience": {
+      "auc": 0.72,
+      "n_pairs": 50,
+      "n_correct": 36,
+      "label": "Patience",
+      "group_id": "persona_params"
+    },
+    "patient_goal": {
+      "auc": 0.98,
+      "n_pairs": 50,
+      "n_correct": 49,
+      "label": "Patient Goal",
+      "group_id": "strategy_params"
+    },
+    "profanity_level": {
+      "auc": 0.74,
+      "n_pairs": 50,
+      "n_correct": 37,
+      "label": "Profanity",
+      "group_id": "communication_params"
+    },
+    "punctuation_style": {
+      "auc": 1.0,
+      "n_pairs": 50,
+      "n_correct": 50,
+      "label": "Punctuation Style",
+      "group_id": "communication_params"
+    },
+    "recall_level": {
+      "auc": 0.82,
+      "n_pairs": 100,
+      "n_correct": 82,
+      "label": "Recall Level",
+      "group_id": "content_params"
+    },
+    "sensitive_topics": {
+      "auc": 1.0,
+      "n_pairs": 50,
+      "n_correct": 50,
+      "label": "Sensitive Topics",
+      "group_id": "strategy_params"
+    },
+    "trust": {
+      "auc": 1.0,
+      "n_pairs": 50,
+      "n_correct": 50,
+      "label": "Scepticism",
+      "group_id": "persona_params"
+    },
+    "typo_rate": {
+      "auc": 0.6,
+      "n_pairs": 50,
+      "n_correct": 30,
+      "label": "Typos",
+      "group_id": "communication_params"
+    }
+  },
+  "per_group": {
+    "communication_params": {
+      "auc": 0.8933,
+      "label": "Communication",
+      "param_count": 8,
+      "n_pairs": 450
+    },
+    "persona_params": {
+      "auc": 0.92,
+      "label": "Persona",
+      "param_count": 5,
+      "n_pairs": 250
+    },
+    "content_params": {
+      "auc": 0.7733,
+      "label": "Content",
+      "param_count": 2,
+      "n_pairs": 150
+    },
+    "strategy_params": {
+      "auc": 0.99,
+      "label": "Strategy",
+      "param_count": 2,
+      "n_pairs": 100
+    }
+  },
+  "per_vignette": {
+    "0": {
+      "auc": 0.8421,
+      "n_pairs": 19,
+      "n_correct": 16
+    },
+    "10": {
+      "auc": 0.8947,
+      "n_pairs": 19,
+      "n_correct": 17
+    },
+    "11": {
+      "auc": 0.8947,
+      "n_pairs": 19,
+      "n_correct": 17
+    },
+    "12": {
+      "auc": 0.8947,
+      "n_pairs": 19,
+      "n_correct": 17
+    },
+    "13": {
+      "auc": 0.7368,
+      "n_pairs": 19,
+      "n_correct": 14
+    },
+    "14": {
+      "auc": 0.7895,
+      "n_pairs": 19,
+      "n_correct": 15
+    },
+    "15": {
+      "auc": 0.8421,
+      "n_pairs": 19,
+      "n_correct": 16
+    },
+    "16": {
+      "auc": 0.8947,
+      "n_pairs": 19,
+      "n_correct": 17
+    },
+    "17": {
+      "auc": 0.8421,
+      "n_pairs": 19,
+      "n_correct": 16
+    },
+    "18": {
+      "auc": 1.0,
+      "n_pairs": 19,
+      "n_correct": 19
+    },
+    "19": {
+      "auc": 0.8421,
+      "n_pairs": 19,
+      "n_correct": 16
+    },
+    "1": {
+      "auc": 0.9474,
+      "n_pairs": 19,
+      "n_correct": 18
+    },
+    "20": {
+      "auc": 0.8421,
+      "n_pairs": 19,
+      "n_correct": 16
+    },
+    "21": {
+      "auc": 0.8947,
+      "n_pairs": 19,
+      "n_correct": 17
+    },
+    "22": {
+      "auc": 0.9474,
+      "n_pairs": 19,
+      "n_correct": 18
+    },
+    "23": {
+      "auc": 0.9474,
+      "n_pairs": 19,
+      "n_correct": 18
+    },
+    "24": {
+      "auc": 0.8947,
+      "n_pairs": 19,
+      "n_correct": 17
+    },
+    "25": {
+      "auc": 0.7895,
+      "n_pairs": 19,
+      "n_correct": 15
+    },
+    "26": {
+      "auc": 0.8421,
+      "n_pairs": 19,
+      "n_correct": 16
+    },
+    "27": {
+      "auc": 0.8947,
+      "n_pairs": 19,
+      "n_correct": 17
+    },
+    "28": {
+      "auc": 0.8947,
+      "n_pairs": 19,
+      "n_correct": 17
+    },
+    "29": {
+      "auc": 0.8947,
+      "n_pairs": 19,
+      "n_correct": 17
+    },
+    "2": {
+      "auc": 0.8421,
+      "n_pairs": 19,
+      "n_correct": 16
+    },
+    "30": {
+      "auc": 0.9474,
+      "n_pairs": 19,
+      "n_correct": 18
+    },
+    "31": {
+      "auc": 0.9474,
+      "n_pairs": 19,
+      "n_correct": 18
+    },
+    "32": {
+      "auc": 0.9474,
+      "n_pairs": 19,
+      "n_correct": 18
+    },
+    "33": {
+      "auc": 0.9474,
+      "n_pairs": 19,
+      "n_correct": 18
+    },
+    "34": {
+      "auc": 0.9474,
+      "n_pairs": 19,
+      "n_correct": 18
+    },
+    "35": {
+      "auc": 0.8947,
+      "n_pairs": 19,
+      "n_correct": 17
+    },
+    "36": {
+      "auc": 0.8421,
+      "n_pairs": 19,
+      "n_correct": 16
+    },
+    "37": {
+      "auc": 0.9474,
+      "n_pairs": 19,
+      "n_correct": 18
+    },
+    "38": {
+      "auc": 0.8421,
+      "n_pairs": 19,
+      "n_correct": 16
+    },
+    "39": {
+      "auc": 1.0,
+      "n_pairs": 19,
+      "n_correct": 19
+    },
+    "3": {
+      "auc": 0.9474,
+      "n_pairs": 19,
+      "n_correct": 18
+    },
+    "40": {
+      "auc": 0.9474,
+      "n_pairs": 19,
+      "n_correct": 18
+    },
+    "41": {
+      "auc": 1.0,
+      "n_pairs": 19,
+      "n_correct": 19
+    },
+    "42": {
+      "auc": 0.8947,
+      "n_pairs": 19,
+      "n_correct": 17
+    },
+    "43": {
+      "auc": 0.8947,
+      "n_pairs": 19,
+      "n_correct": 17
+    },
+    "44": {
+      "auc": 0.9474,
+      "n_pairs": 19,
+      "n_correct": 18
+    },
+    "45": {
+      "auc": 0.8421,
+      "n_pairs": 19,
+      "n_correct": 16
+    },
+    "46": {
+      "auc": 0.7368,
+      "n_pairs": 19,
+      "n_correct": 14
+    },
+    "47": {
+      "auc": 0.8947,
+      "n_pairs": 19,
+      "n_correct": 17
+    },
+    "48": {
+      "auc": 0.8947,
+      "n_pairs": 19,
+      "n_correct": 17
+    },
+    "49": {
+      "auc": 1.0,
+      "n_pairs": 19,
+      "n_correct": 19
+    },
+    "4": {
+      "auc": 0.8421,
+      "n_pairs": 19,
+      "n_correct": 16
+    },
+    "5": {
+      "auc": 0.8947,
+      "n_pairs": 19,
+      "n_correct": 17
+    },
+    "6": {
+      "auc": 0.8421,
+      "n_pairs": 19,
+      "n_correct": 16
+    },
+    "7": {
+      "auc": 0.8421,
+      "n_pairs": 19,
+      "n_correct": 16
+    },
+    "8": {
+      "auc": 0.8947,
+      "n_pairs": 19,
+      "n_correct": 17
+    },
+    "9": {
+      "auc": 0.8947,
+      "n_pairs": 19,
+      "n_correct": 17
+    }
+  },
+  "total_pairs": 950,
+  "total_correct": 847
+}

@@ -1,0 +1,18 @@
+{
+  "overall_compliance": 1.0,
+  "total_jobs": 100,
+  "per_probe": {
+    "stop_goal_met": {
+      "compliance_rate": 1.0,
+      "n_jobs": 50,
+      "n_compliant": 50,
+      "label": "Stop \u2014 Goal Met"
+    },
+    "stop_gives_up": {
+      "compliance_rate": 1.0,
+      "n_jobs": 50,
+      "n_compliant": 50,
+      "label": "Stop \u2014 Gives Up"
+    }
+  }
+}
