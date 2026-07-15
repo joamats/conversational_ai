@@ -2,7 +2,7 @@
 
 Code accompanying the paper *The complexities of patient-centred conversational artificial intelligence*.
 
-Paper: [arXiv:XXXX.XXXXX](https://arxiv.org/abs/XXXX.XXXXX) *(preprint link to be added)*
+Paper: [arXiv:2607.08625](https://arxiv.org/abs/2607.08625)
 
 This repository accompanies a study on patient-centred conversational AI for symptom assessment. A patient simulator is assessed for parameter adherence (whether its behaviour changes as configured), clinical fidelity (whether it stays faithful to the underlying case), and realism (a Turing-style test in which human and LLM graders try to tell simulated conversations from real ones). Using a set of patient personae across clinician-graded cases, we also measure how a patient's communication style affects the urgency (triage) assessments produced by LLMs.
 
@@ -89,10 +89,10 @@ Some scripts and inputs are derived from real user data and/or need proprietary 
 ```bibtex
 @article{patient_centred_conversational_ai,
   title   = {The complexities of patient-centred conversational artificial intelligence},
-  author  = {TODO},
+  author  = {João Matos, Olivia Buege, Donny Cheung, Gary S. Collins, Paula Dhiman, Nan Li, Bingyu Mao, Benjamin W. Nelson, Michail Ouroutzoglou, Paul Varghese, Jonathan Amar},
   year    = {2026},
-  journal = {TODO},
-  note    = {Preprint. arXiv:XXXX.XXXXX},
-  url     = {https://arxiv.org/abs/XXXX.XXXXX}
+  journal = {arXiv preprint arXiv:2607.08625},
+  note    = {Preprint.},
+  url     = {https://arxiv.org/abs/2607.08625}
 }
 ```
