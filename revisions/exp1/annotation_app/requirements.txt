@@ -1,0 +1,5 @@
+gradio>=6.26.0
+openpyxl>=3.1.5
+
+# Optional: google-cloud-storage (only with GRADER_WORKBOOK_GCS)
+# Version used: gradio 6.26.0
