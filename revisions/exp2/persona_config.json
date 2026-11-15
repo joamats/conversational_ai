@@ -1,0 +1,14 @@
+{
+  "_comment": "Experiment 2: clinical fidelity across personas. 'conversations_dir' must point at the conversations/ directory of an already-run fairness experiment (python -m fairness.run; doctor model Gemini 3.5 Flash). Relative paths are resolved from the repository root.",
+  "conversations_dir": "fairness/results/runs/<RUN_ID>/conversations",
+  "fairness_config_path": "fairness/configs/config_gemini.json",
+  "results_path": "revisions/exp2/results/persona_runs",
+  "n_cases": 150,
+  "seed": 42,
+  "max_workers": 8,
+  "shared_vignette_claims": true,
+  "judge": {
+    "model": "claude-opus-4-6",
+    "client_type": "anthropic_vertex"
+  }
+}

@@ -3,7 +3,7 @@
     python analyze_exp1_validation.py --workbook grader_annotations.xlsx
 
 Takes the LLM judge's output and the ground truth from annotation_app/data/*.json, writes tables and CSVs to results/.
-Needs pandas, numpy and openpyxl. Deterministic (bootstrap seed below).
+Needs pandas, numpy, scipy and openpyxl. Deterministic (bootstrap seed below).
 
 Conventions
 - The workbook is append-only; the latest row per key is kept.
@@ -21,6 +21,7 @@ from pathlib import Path
 
 import numpy as np
 import pandas as pd
+from scipy.stats import kendalltau
 
 ROOT = Path(__file__).parent
 DATA = ROOT / "annotation_app" / "data"
@@ -69,6 +70,12 @@ def wilson(k: int, n: int, z: float = 1.96) -> tuple[float, float]:
     c = (p + z**2 / (2 * n)) / d
     h = z * np.sqrt(p * (1 - p) / n + z**2 / (4 * n**2)) / d
     return (c - h, c + h)
+
+
+def kendall_tau_b(a, b) -> float:
+    """Kendall's tau-b (tie-corrected); NaN when either rating is constant."""
+    a, b = np.asarray(a, dtype=float), np.asarray(b, dtype=float)
+    return np.nan if np.ptp(a) == 0 or np.ptp(b) == 0 else float(kendalltau(a, b)[0])
 
 
 def cohen_kappa(x, y, labels, weights: str | None = None) -> float:
@@ -173,8 +180,6 @@ def latest(df: pd.DataFrame, key: list[str]) -> pd.DataFrame:
     df = df.assign(_ts=pd.to_datetime(df["saved_at"]), _row=np.arange(len(df)))
     return df.sort_values(["_ts", "_row"]).groupby(key, sort=False).tail(1).drop(columns=["_ts", "_row"]).reset_index(drop=True)
 
-
-# LLM / ground-truth columns that a copy of the workbook may carry; dropped so results never depend on them.
 ADDED_COLUMNS = {"is_latest_for_key", "use_in_analysis", "activated_job_id", "activated_conversation",
                  "selected_is_activated", "category_matches_llm"}
 
@@ -444,9 +449,10 @@ def pair_table(w: pd.DataFrame, kind: str, category: str) -> pd.DataFrame:
 def score_pair_stats(pairs: pd.DataFrame) -> dict:
     a, b = pairs.a.to_numpy(), pairs.b.to_numpy()
     if len(a) == 0:
-        return {"n_pairs": 0, "exact": np.nan, "within1": np.nan, "wkappa": np.nan, "mean_diff": np.nan}
+        return {"n_pairs": 0, "exact": np.nan, "within1": np.nan, "wkappa": np.nan, "kendall": np.nan, "mean_diff": np.nan}
     return {"n_pairs": len(a), "exact": (a == b).mean(), "within1": (np.abs(a - b) <= 1).mean(),
-            "wkappa": cohen_kappa(a, b, [1, 2, 3, 4], "quadratic"), "mean_diff": (a - b).mean()}
+            "wkappa": cohen_kappa(a, b, [1, 2, 3, 4], "quadratic"), "mean_diff": (a - b).mean(),
+            "kendall": kendall_tau_b(a, b)}
 
 
 def run_fidelity(claims_raw: pd.DataFrame, summary_raw: pd.DataFrame) -> dict:
@@ -478,7 +484,7 @@ def run_fidelity(claims_raw: pd.DataFrame, summary_raw: pd.DataFrame) -> dict:
             res = {}
             for kind in ("lh", "hh"):
                 st = score_pair_stats(d[d.kind == kind])
-                res.update({f"{kind}_{k}": st[k] for k in ("exact", "within1", "wkappa")})
+                res.update({f"{kind}_{k}": st[k] for k in ("exact", "within1", "wkappa", "kendall")})
             res["lh_mean_diff"] = score_pair_stats(d[d.kind == "lh"])["mean_diff"]  # LLM minus human; human-human has no direction
             res["diff_exact_lh_minus_hh"] = res["lh_exact"] - res["hh_exact"]
             return res
@@ -728,7 +734,9 @@ def markdown_tables(adh: dict, fid: dict) -> str:
     for scale, e in fid["scores"].items():
         L += [f"| {scale.capitalize()} score, exact agreement (pairs with same category; n={e['n_llm_human_pairs']} / {e['n_human_pairs']}) | {ci(e['lh_exact'], True)} | {ci(e['hh_exact'], True)} |",
               f"| &nbsp;&nbsp;within 1 point | {ci(e['lh_within1'], True)} | {ci(e['hh_within1'], True)} |",
-              f"| &nbsp;&nbsp;quadratic-weighted kappa | {ci(e['lh_wkappa'])} | {ci(e['hh_wkappa'])} (human alpha, ordinal: {ci(e['human_alpha_ordinal'])}) |"]
+              f"| &nbsp;&nbsp;quadratic-weighted kappa | {ci(e['lh_wkappa'])} | {ci(e['hh_wkappa'])} (human alpha, ordinal: {ci(e['human_alpha_ordinal'])}) |",
+              f"| &nbsp;&nbsp;Kendall's tau-b (discrimination) | {ci(e['lh_kendall'])} | {ci(e['hh_kendall'])} |",
+              f"| &nbsp;&nbsp;mean score difference, LLM minus human (calibration) | {ci(e['lh_mean_diff'])} | n/a (no direction) |"]
     L.append(f"| Supporting vignette claim, same claim chosen (n={fid['vclaim']['n']} ratings) | {ci(fid['vclaim']['match'], True)} | n/a |")
     cv = fid["coverage"]
     L += [f"| Vignette claim mentioned vs not (n={cv['n_items']} vignette claims): pairwise agreement | {ci(cv['llm_h'], True)} | {ci(cv['h_h'], True)} |",
@@ -744,7 +752,9 @@ def markdown_tables(adh: dict, fid: dict) -> str:
           "grader pairs. Cohen's kappa is pooled over the LLM-grader pairs; Fleiss' kappa is among the 3 graders; Krippendorff's alpha (nominal, or ordinal for scores) is among "
           "the graders only (for the claim category it uses every claim, including those with 2 graders).",
           "- *Scores.* Accuracy / plausibility rows use rating pairs where both raters gave the claim the same category (n = LLM-human pairs / human-human pairs). "
-          "Exact = identical 1-4 score; within 1 = scores differ by at most 1; quadratic-weighted kappa treats the 1-4 scale as ordinal.",
+          "Exact = identical 1-4 score; within 1 = scores differ by at most 1; quadratic-weighted kappa treats the 1-4 scale as ordinal. "
+          "Kendall's tau-b is the tie-corrected rank correlation of the paired scores (probability two claims are ordered the same way minus the probability they are ordered oppositely): it measures discrimination and, unlike exact agreement and kappa, ignores a constant shift between raters. "
+          "The mean difference (LLM minus human) measures that shift (calibration); it has no direction for human-human pairs.",
           "- *Supporting vignette claim.* Share of supported-supported rating pairs in which the grader and the LLM point at the same vignette claim. "
           "*Mentioned vs not.* Per vignette claim, whether the conversation mentions it (conversations with all 3 graders' summaries); LLM vs the majority of the 3 graders.",
           f"- *95% CIs.* Percentile cluster bootstrap over records (B = {N_BOOT}; whole conversations resampled, because claims within a conversation are not independent).", ""]
