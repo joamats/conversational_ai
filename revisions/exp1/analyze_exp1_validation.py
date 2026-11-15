@@ -2,7 +2,7 @@
 
     python analyze_exp1_validation.py --workbook grader_annotations.xlsx
 
-Takes the LLM judge's output and the ground truth from data/*.json, writes tables and CSVs to results/.
+Takes the LLM judge's output and the ground truth from annotation_app/data/*.json, writes tables and CSVs to results/.
 Needs pandas, numpy and openpyxl. Deterministic (bootstrap seed below).
 
 Conventions
@@ -23,7 +23,7 @@ import numpy as np
 import pandas as pd
 
 ROOT = Path(__file__).parent
-DATA = ROOT / "data"
+DATA = ROOT / "annotation_app" / "data"
 OUT = ROOT / "results"
 SEED = 20260603
 N_BOOT = 2000
@@ -174,7 +174,7 @@ def latest(df: pd.DataFrame, key: list[str]) -> pd.DataFrame:
     return df.sort_values(["_ts", "_row"]).groupby(key, sort=False).tail(1).drop(columns=["_ts", "_row"]).reset_index(drop=True)
 
 
-# Columns appended by add_llm_and_truth_to_workbook.py; dropped so results are identical on either workbook.
+# LLM / ground-truth columns that a copy of the workbook may carry; dropped so results never depend on them.
 ADDED_COLUMNS = {"is_latest_for_key", "use_in_analysis", "activated_job_id", "activated_conversation",
                  "selected_is_activated", "category_matches_llm"}
 
