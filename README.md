@@ -76,6 +76,7 @@ Regenerate the samples with `python tests/generate_sample_data.py`.
 | `doctor/` | The AI clinician / triage agent that converses with simulated patients. |
 | `fairness/` | Fairness and subgroup analyses run over simulated personas, to assess the impact of communication style on urgency assessment. |
 | `figures/` | Figures used in the paper. |
+| `revisions/` | Revisions related files, for two new experiments arising from peer-review. |
 | `src/` | The patient simulator and its parameter schema (see `src/README.md`). |
 | `tests/` | Smoke tests and synthetic sample data (`sample_synthetic_data/`). |
 
